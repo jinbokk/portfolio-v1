@@ -1,0 +1,53 @@
+:root {
+  --main-background-color: rgb(17 16 16);
+  --main-text-color: white;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  color: var(--main-text-color);
+  background: var(--main-background-color);
+  font-family: var(--font-inconsolata);
+}
+
+.layoutContainer {
+  display: flex;
+}
+
+.contentsContainer {
+  max-width: 90vw;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.sidebarContainer {
+  width: 20vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h2 {
+  border-bottom: 2px solid white;
+  padding-top: 50px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  opacity: 0.8;
+  margin-bottom: 10px;
+}
