@@ -43,24 +43,24 @@ export default function ProjectGraph() {
   return (
     <>
       <div className="container-top">
-        <div className="progress-bar"></div>
+        {/* <div className="progress-bar"></div> */}
         <div className="project-card-container">
           {projects.map((project, index) => {
             return (
               <div
                 key={index}
                 className="project-card"
-                style={{
-                  backgroundImage: `url(${project.imageURL})`,
-                  backgroundSize: "cover",
-                  backgroundRepeat: "no-repeat",
-                  backgroundPosition: "center center",
-                }}
+                // style={{
+                //   backgroundImage: `url(${project.imageURL})`,
+                //   backgroundSize: "cover",
+                //   backgroundRepeat: "no-repeat",
+                //   backgroundPosition: "center center",
+                // }}
                 onClick={() => {
                   router.push(project.path);
                 }}
               >
-                {/* <div>{project.projectName}</div> */}
+                <div className="text-lg">{project.projectName}</div>
                 <div className="project-description">
                   {project.projectDescription}
                 </div>
@@ -75,7 +75,7 @@ export default function ProjectGraph() {
           display: flex;
           flex-direction: column;
           width: 100%;
-          height: 70%;
+          height: 10%;
         }
 
         .progress-bar {
@@ -87,15 +87,20 @@ export default function ProjectGraph() {
         }
 
         .project-card-container {
+          position: fixed;
+          top: 200px;
+          left: 100px;
           display: flex;
-          height: 80%;
+          flex-direction: column-reverse;
+          width: 30px;
+          height: 70%;
         }
 
         .project-card {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: rgba(255, 255, 255, 0.3);
+          background-color: rgba(255, 255, 255, 0.1);
           transition: 0.7s; /* 확대/축소 애니메이션을 위한 트랜지션 속성 */
           cursor: pointer;
           margin: 5px;

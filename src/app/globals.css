@@ -1,12 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   --main-background-color: rgb(17 16 16);
   --main-text-color: white;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
 }
 
 html,
@@ -19,6 +17,21 @@ body {
   color: var(--main-text-color);
   background: var(--main-background-color);
   font-family: var(--font-inconsolata);
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--main-background-color);
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgba(128, 128, 128, 0.5);
+  border: 3px solid var(--main-background-color);
+  border-radius: 10px;
 }
 
 .layoutContainer {
@@ -40,14 +53,50 @@ a {
   text-decoration: none;
 }
 
-h2 {
+h1 {
   border-bottom: 2px solid white;
-  padding-top: 50px;
   padding-bottom: 5px;
+  margin-bottom: 10px;
+  font-size: 30px;
+}
+
+h2 {
+  opacity: 0.8;
   margin-bottom: 10px;
 }
 
-h3 {
-  opacity: 0.8;
-  margin-bottom: 10px;
+.nav_logo_top {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+  z-index: 100;
+  transition: 0.3s;
+}
+
+.nav_logo_middle {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  cursor: pointer;
+  z-index: 90;
+  transition: 0.3s;
+}
+
+.nav_logo_bottom {
+  position: fixed;
+  top: 40px;
+  left: 40px;
+  user-select: none;
+  z-index: -1;
+}
+
+.nav_logo_top:hover,
+.nav_logo_top:hover + .nav_logo_middle {
+  transform: translate(-3px, -3px);
+  transition: 0.3s;
+}
+
+.mainContainer {
+  background-color: blue;
 }

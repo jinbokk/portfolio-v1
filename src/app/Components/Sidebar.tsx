@@ -52,65 +52,68 @@ export default function Sidebar() {
   }, []);
 
   return (
-    <nav>
-      <div className="menuContainer">
-        <Link href="/projects" className="right-1">
-          <div style={{ display: "flex", alignItems: "center" }}>
+    <>
+      <div className="h-screen w-auto flex flex-col justify-between px-10 fixed bottom-0 right-0">
+        <div className="menuContainer">
+          <Link href="/projects" className="right-1">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Image
+                src="/icons/triangle-right.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
+              <div className="menuText">PROJECTS</div>
+            </div>
+          </Link>
+          <Link href="/info" className="right-2">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Image
+                src="/icons/triangle-right.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
+              <div className="menuText">INFO</div>
+            </div>
+          </Link>
+          <Link href="/contact" className="right-3">
+            <div style={{ display: "flex", alignItems: "center" }}>
+              <Image
+                src="/icons/triangle-right.svg"
+                alt=""
+                width={25}
+                height={25}
+              />
+              <div className="menuText">CONTACT</div>
+            </div>
+          </Link>
+        </div>
+
+        <div className="buttonContainer">
+          <a
+            href="https://github.com/jinbokk"
+            target="_blank"
+            className="opacity"
+          >
             <Image
-              src="/icons/triangle-right.svg"
-              alt=""
-              width={25}
-              height={25}
+              src="/icons/github-mark-white.svg"
+              alt="github"
+              width={30}
+              height={30}
             />
-            <div className="menuText">PROJECTS</div>
-          </div>
-        </Link>
-        <Link href="/info" className="right-2">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Image
-              src="/icons/triangle-right.svg"
-              alt=""
-              width={25}
-              height={25}
-            />
-            <div className="menuText">INFO</div>
-          </div>
-        </Link>
-        <Link href="/contact" className="right-3">
-          <div style={{ display: "flex", alignItems: "center" }}>
-            <Image
-              src="/icons/triangle-right.svg"
-              alt=""
-              width={25}
-              height={25}
-            />
-            <div className="menuText">CONTACT</div>
-          </div>
-        </Link>
+          </a>
+
+          <div className="line-1"></div>
+
+          <a className="email-text opacity" href="mailto:eyelash1024@naver.com">
+            eyelash1024@naver.com
+          </a>
+
+          <div className="line-2"></div>
+        </div>
       </div>
 
-      <div className="buttonContainer">
-        <a
-          href="https://github.com/jinbokk"
-          target="_blank"
-          className="opacity"
-        >
-          <Image
-            src="/icons/github-mark-white.svg"
-            alt="github"
-            width={30}
-            height={30}
-          />
-        </a>
-
-        <div className="line-1"></div>
-
-        <a className="email-text opacity" href="mailto:eyelash1024@naver.com">
-          eyelash1024@naver.com
-        </a>
-
-        <div className="line-2"></div>
-      </div>
       <style jsx>
         {`
           .menuContainer {
@@ -119,9 +122,7 @@ export default function Sidebar() {
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-around;
-            position: absolute;
-            top: 50px;
-            right: 50px;
+            margin-top: 5rem;
           }
 
           .menuText {
@@ -143,9 +144,6 @@ export default function Sidebar() {
           }
 
           .buttonContainer {
-            position: absolute;
-            bottom: 0;
-            right: 100px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
@@ -164,12 +162,12 @@ export default function Sidebar() {
           }
 
           .email-text {
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 2px;
           }
 
           .line-1 {
-            height: 100px;
+            height: 70px;
             width: 1px;
             border: 1px var(--main-text-color) solid;
             opacity: 0.5;
@@ -187,6 +185,6 @@ export default function Sidebar() {
           }
         `}
       </style>
-    </nav>
+    </>
   );
 }

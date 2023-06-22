@@ -4,13 +4,9 @@ import styles from "./info.module.css";
 export default function Info() {
   return (
     <>
-      <svg viewBox="0 0 1320 300" className={styles.svgContainer}>
-        <text dy=".35em" text-anchor="middle" fill="white">
-          JB
-        </text>
-      </svg>
-      <h2>INFO</h2>
-      <h3>my info</h3>
+
+      <h1>INFO</h1>
+      <h2>my info</h2>
       <div className={styles.container}>
         <div>
           <Image
