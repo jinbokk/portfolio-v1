@@ -50,7 +50,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${orbit.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
+        className={`${orbit.variable} ${inconsolata.variable} ${roboto_mono.variable} snap-y w-screen h-screen overflow-y-scroll`}
       >
         {isLoading && isHome ? (
           <SplashScreen setIsLoading={setIsLoading} />
@@ -79,8 +79,8 @@ export default function RootLayout({
                 className="nav_logo_bottom"
               />
             </Link>
-            <div className="px-60 mx-0">{children}</div>
             <Sidebar />
+            <div className="px-60 mx-0">{children}</div>
           </>
         )}
       </body>

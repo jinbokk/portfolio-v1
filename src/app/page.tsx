@@ -1,8 +1,11 @@
 "use client";
 
-import { gsap } from "gsap";
-import Image from "next/image";
 import { useLayoutEffect } from "react";
+import Image from "next/image";
+import { gsap } from "gsap";
+import Journey from "@/components/sections/Journey";
+import Project from "@/components/sections/Project";
+import Developer from "@/animation/Developer";
 
 export default function Home() {
   useLayoutEffect(() => {
@@ -24,7 +27,18 @@ export default function Home() {
   return (
     <>
       <main>
-        <section className="h-screen flex flex-col justify-center items-start">
+        <section className="relative">
+          <div
+            style={{
+              position: "absolute",
+              width: "80%",
+              top: "15%",
+              right: "50px",
+            }}
+          >
+            <Developer />
+          </div>
+          
           <div className="up-1">
             <div style={{ fontSize: "30px" }}>Hello, my name is</div>
 
@@ -43,9 +57,9 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full">
+        <section>
           <h1># about me</h1>
-          <div className="flex justify-around">
+          <div className="flex justify-around items-center">
             <div className="basis-2/3">
               <h2>
                 Hello! My name is Jinbok. I have a passion for developing
@@ -78,27 +92,23 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="w-full">
+        <section>
           <h1># my journey before becoming a developer</h1>
-          <h2>journey</h2>
+          <Journey />
         </section>
 
-        <section className="w-full">
+        <section>
           <h1># some things i&apos;ve built</h1>
-          <h2>built</h2>
+          <Project />
         </section>
 
-        <section className="w-full">
+        <section>
           <h1># what is next ?</h1>
           <h2>say hello</h2>
         </section>
       </main>
 
       <style jsx>{`
-        section {
-          margin-bottom: 10rem;
-        }
-
         .mainTextContainer {
           font-size: 150px;
           line-height: 150px;

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./projects.module.css";
 import Link from "next/link";
-import ProjectGraph from "@/components/ProjectGraph";
+import ProjectGraph from "@/app/components/sections/ProjectGraph";
 
 export default function Projects() {
   return (

@@ -99,7 +99,7 @@ export default function SplashScreen({
             transition: all 0.7s ease-in-out;
             animation: slide-up 0.5s ease-out forwards;
             animation-delay: 3.5s;
-            fill: var(--main-background-color);
+            fill: var(--main-bg-color);
           }
 
           .filled {
