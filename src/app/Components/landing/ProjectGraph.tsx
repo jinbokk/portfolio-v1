@@ -100,7 +100,7 @@ export default function ProjectGraph() {
           display: flex;
           justify-content: center;
           align-items: center;
-          background-color: rgba(255, 255, 255, 0.1);
+          background-color: var(--main-bg-color);
           transition: 0.7s; /* 확대/축소 애니메이션을 위한 트랜지션 속성 */
           cursor: pointer;
           margin: 5px;

@@ -1,11 +1,11 @@
 import Image from "next/image";
 import styles from "./projects.module.css";
 import Link from "next/link";
-import ProjectGraph from "@/app/components/sections/ProjectGraph";
+import ProjectGraph from "@/app/components/landing/ProjectGraph";
 
 export default function Projects() {
   return (
-    <div>
+    <>
       <h1>PROJECTS</h1>
       <h2>
         Here are the project logs showcasing my personal work over the course of
@@ -13,6 +13,6 @@ export default function Projects() {
       </h2>
 
       <ProjectGraph />
-    </div>
+    </>
   );
 }

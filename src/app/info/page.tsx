@@ -4,7 +4,6 @@ import styles from "./info.module.css";
 export default function Info() {
   return (
     <>
-
       <h1>INFO</h1>
       <h2>my info</h2>
       <div className={styles.container}>

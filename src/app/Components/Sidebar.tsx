@@ -11,7 +11,7 @@ export default function Sidebar() {
 
   useLayoutEffect(() => {
     if (pathname === "/") {
-      // buttonContainer
+      //* buttonContainer
       gsap
         .fromTo(
           ".buttonContainer",
@@ -24,7 +24,7 @@ export default function Sidebar() {
         )
         .delay(2.5);
 
-      // menuContainer
+      //* menuContainer
       gsap
         .fromTo(
           ".right-1",
@@ -53,76 +53,77 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className="h-screen w-auto flex flex-col justify-between px-10 fixed bottom-0 right-0">
-        <div className="menuContainer">
-          <Link href="/projects" className="right-1">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Image
-                src="/icons/triangle-right.svg"
-                alt=""
-                width={25}
-                height={25}
-              />
-              <div className="menuText">PROJECTS</div>
-            </div>
-          </Link>
-          <Link href="/info" className="right-2">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Image
-                src="/icons/triangle-right.svg"
-                alt=""
-                width={25}
-                height={25}
-              />
-              <div className="menuText">INFO</div>
-            </div>
-          </Link>
-          <Link href="/contact" className="right-3">
-            <div style={{ display: "flex", alignItems: "center" }}>
-              <Image
-                src="/icons/triangle-right.svg"
-                alt=""
-                width={25}
-                height={25}
-              />
-              <div className="menuText">CONTACT</div>
-            </div>
-          </Link>
-        </div>
-
-        <div className="buttonContainer">
-          <a
-            href="https://github.com/jinbokk"
-            target="_blank"
-            className="opacity"
-          >
+      <div className="menuContainer">
+        <Link href="/projects" className="right-1 z-40">
+          <div style={{ display: "flex", alignItems: "center" }}>
             <Image
-              src="/icons/github-mark-white.svg"
-              alt="github"
-              width={30}
-              height={30}
+              src="/icons/triangle-right.svg"
+              alt=""
+              width={25}
+              height={25}
             />
-          </a>
+            <div className="menuText">PROJECTS</div>
+          </div>
+        </Link>
+        <Link href="/info" className="right-2 z-40">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src="/icons/triangle-right.svg"
+              alt=""
+              width={25}
+              height={25}
+            />
+            <div className="menuText">INFO</div>
+          </div>
+        </Link>
+        <Link href="/contact" className="right-3 z-40">
+          <div style={{ display: "flex", alignItems: "center" }}>
+            <Image
+              src="/icons/triangle-right.svg"
+              alt=""
+              width={25}
+              height={25}
+            />
+            <div className="menuText">CONTACT</div>
+          </div>
+        </Link>
+      </div>
 
-          <div className="line-1"></div>
+      <div className="buttonContainer">
+        <a
+          href="https://github.com/jinbokk"
+          target="_blank"
+          className="opacity"
+        >
+          <Image
+            src="/icons/github-mark-white.svg"
+            alt="github"
+            width={30}
+            height={30}
+          />
+        </a>
 
-          <a className="email-text opacity" href="mailto:eyelash1024@naver.com">
-            eyelash1024@naver.com
-          </a>
+        <div className="line-1"></div>
 
-          <div className="line-2"></div>
-        </div>
+        <a className="email-text opacity" href="mailto:eyelash1024@naver.com">
+          eyelash1024@naver.com
+        </a>
+
+        <div className="line-2"></div>
       </div>
 
       <style jsx>
         {`
           .menuContainer {
+            position: fixed;
+            top: 50px;
+            right: 50px;
             height: 20%;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
             justify-content: space-around;
-            margin-top: 5rem;
+            z-index: 50;
           }
 
           .menuText {
@@ -144,12 +145,16 @@ export default function Sidebar() {
           }
 
           .buttonContainer {
+            position: fixed;
+            bottom: 0;
+            right: 80px;
             display: flex;
             flex-direction: row;
             justify-content: flex-end;
             align-items: center;
             writing-mode: vertical-rl;
             font-family: var(--font-roboto-mono);
+            z-index: 50;
           }
 
           .opacity {

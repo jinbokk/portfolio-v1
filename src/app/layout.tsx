@@ -1,14 +1,15 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMotionValue } from "framer-motion";
+import { useEffect, useState, MouseEvent } from "react";
 import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 
 import { Orbit, Roboto_Mono, Inconsolata } from "next/font/google";
 import { usePathname } from "next/navigation";
 import SplashScreen from "@/components/SplashScreen";
-import Image from "next/image";
-import Link from "next/link";
+import Logo from "./components/Logo";
+import Mouse from "@/util/Mouse";
 
 const orbit = Orbit({
   subsets: ["latin"],
@@ -39,49 +40,39 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  //* Splash Screen
   const pathname: string = usePathname();
   const isHome: boolean = pathname === "/";
   const [isLoading, setIsLoading] = useState<boolean>(isHome);
 
   useEffect(() => {
     if (isLoading) return;
-  }, []);
+  }, [isLoading]);
+
+  //* Mouse
+  let mouseX = useMotionValue(0);
+  let mouseY = useMotionValue(0);
+
+  function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
+    let { left, top } = currentTarget.getBoundingClientRect();
+    mouseX.set(clientX - left);
+    mouseY.set(clientY - top);
+  }
 
   return (
     <html lang="ko">
       <body
-        className={`${orbit.variable} ${inconsolata.variable} ${roboto_mono.variable} snap-y w-screen h-screen overflow-y-scroll`}
+        className={`${orbit.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
       >
         {isLoading && isHome ? (
           <SplashScreen setIsLoading={setIsLoading} />
         ) : (
-          <>
-            <Link href="/">
-              <Image
-                src="/icons/jb-logo.svg"
-                width={50}
-                height={50}
-                alt=""
-                className="nav_logo_top"
-              />
-              <Image
-                src="/icons/jb-logo-middle.svg"
-                width={50}
-                height={50}
-                alt=""
-                className="nav_logo_middle"
-              />
-              <Image
-                src="/icons/jb-logo-background.svg"
-                width={50}
-                height={50}
-                alt=""
-                className="nav_logo_bottom"
-              />
-            </Link>
+          <div className="relative" onMouseMove={handleMouseMove}>
+            <Mouse mouseX={mouseX} mouseY={mouseY} />
+            <Logo />
             <Sidebar />
-            <div className="px-60 mx-0">{children}</div>
-          </>
+            <main className="relative z-40">{children}</main>
+          </div>
         )}
       </body>
     </html>
