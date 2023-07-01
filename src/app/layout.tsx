@@ -5,16 +5,16 @@ import { useEffect, useState, MouseEvent } from "react";
 import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 
-import { Orbit, Roboto_Mono, Inconsolata } from "next/font/google";
+import { Roboto_Mono, Inconsolata, Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import SplashScreen from "@/components/SplashScreen";
 import Logo from "./components/Logo";
 import Mouse from "@/util/Mouse";
 
-const orbit = Orbit({
+const inter = Inter({
   subsets: ["latin"],
   weight: "400",
-  variable: "--font-orbit",
+  variable: "--font-inter",
 });
 
 const roboto_mono = Roboto_Mono({
@@ -62,7 +62,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`${orbit.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
+        className={`${inter.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
       >
         {isLoading && isHome ? (
           <SplashScreen setIsLoading={setIsLoading} />

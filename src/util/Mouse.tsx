@@ -8,7 +8,7 @@ export default function Mouse({ mouseX, mouseY }) {
         background: useMotionTemplate`
               radial-gradient(
                 500px circle at ${mouseX}px ${mouseY}px,
-                rgba(14, 165, 233, 0.15),
+                rgba(14, 112, 124, 0.15),
                 transparent 80%
               )
             `,

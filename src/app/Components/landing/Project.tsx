@@ -68,14 +68,14 @@ export default function Project() {
                   index % 2 === 0 ? "items-end right-20" : "left-20"
                 }`}
               >
-                <p
+                <div
                   className={`project-overline ${
                     index % 2 === 0 ? "text-end" : "text-start"
                   }`}
                 >
-                  Personal Project<br></br>
-                  {item.duration}
-                </p>
+                  <div className="mb-1">Personal Project</div>
+                  <div className="text-sm">{item.duration}</div>
+                </div>
                 <a href={item.url} target="_blank" className="title-wrapper">
                   <h3
                     className={`${index % 2 === 0 ? "text-end" : "text-start"}`}

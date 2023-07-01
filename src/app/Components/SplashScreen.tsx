@@ -14,7 +14,17 @@ export default function SplashScreen({
     visible: {
       opacity: 1,
       pathLength: 1,
-      transition: { duration: 2, ease: "easeInOut" },
+      transition: { duration: 1, ease: "easeInOut" },
+    },
+  };
+
+  const LogoVariants = {
+    hidden: {
+      opacity: 0,
+    },
+    visible: {
+      opacity: 1,
+      transition: { duration: 0.5, ease: "easeInOut", delay: 1.5 },
     },
   };
 
@@ -43,42 +53,37 @@ export default function SplashScreen({
   return (
     <>
       <div className="splash_container" ref={splashContainerRef}>
-        <div className={`splash_logo ${isAnimationComplete ? "filled" : ""}`}>
+        <div className="splash_logo">
           <motion.svg
             initial="hidden"
             animate="visible"
             xmlns="http://www.w3.org/2000/svg"
             onAnimationComplete={() => setIsAnimationComplete(true)}
-            viewBox="0 0 679 588"
-            style={{ width: "300px", height: "300px" }}
+            viewBox="0 0 532.2 460.3"
+            style={{ width: "100%", height: "100%"}}
           >
-            <motion.g
-              transform="translate(0,588) scale(0.1,-0.1)"
-              strokeWidth={50}
-            >
-              <motion.path
-                variants={pathVariants}
-                d="M848 4410 l-848 -1470 848 -1470 847 -1469 1700 0 1700 0 847 1469
-                    848 1470 -848 1470 -847 1469 -1700 0 -1700 0 -847 -1469z m4914 -105 l788
-                    -1365 -788 -1365 -787 -1364 -1580 0 -1580 0 -787 1364 -788 1365 788 1365
-                    787 1364 1580 0 1580 0 787 -1364z"
-              />
-              <motion.path
-                variants={pathVariants}
-                d="M2280 3845 l0 -115 455 0 455 0 0 -719 c0 -403 -4 -740 -9 -767 -19
-                    -100 -52 -166 -110 -225 -78 -78 -141 -101 -288 -107 -134 -5 -214 15 -308 76
-                    -58 37 -152 130 -187 182 l-16 25 -88 -86 -87 -87 33 -47 c71 -103 199 -207
-                    311 -252 119 -48 176 -58 329 -57 164 0 238 15 359 70 l74 34 376 0 c213 0
-                    415 5 466 11 340 42 565 214 620 474 40 190 3 373 -99 491 -69 80 -218 158
-                    -343 179 -24 4 -43 10 -43 14 0 4 25 15 55 26 226 76 354 297 317 547 -37 257
-                    -226 401 -572 438 -55 5 -434 10 -897 10 l-803 0 0 -115z m1744 -134 c186 -49
-                    256 -137 256 -322 0 -118 -23 -181 -90 -243 -97 -91 -189 -113 -497 -122
-                    l-223 -7 0 363 0 363 238 -6 c196 -4 251 -9 316 -26z m36 -914 c126 -29 181
-                    -56 246 -121 80 -80 99 -134 98 -266 -1 -71 -7 -109 -23 -152 -30 -79 -103
-                    -157 -183 -195 -112 -55 -185 -66 -470 -71 l-258 -4 0 417 0 418 263 -6 c179
-                    -4 283 -10 327 -20z"
-              />
-            </motion.g>
+            <motion.path
+              variants={pathVariants}
+              style={{
+                fill: "none",
+                stroke: "white",
+                strokeWidth: "25px",
+                strokeLinecap: "round",
+              }}
+              d="M14.4,230.2L140.1,12.5h252l125.7,217.7L392.1,447.8h-252L14.4,230.2z"
+            />
+            <motion.path
+              variants={LogoVariants}
+              style={{ fill: "white" }}
+              d="M165,149.4v10.4h41.2h41.2V225c0,36.5-0.4,67.1-0.8,69.5c-1.7,9.1-4.7,15-10,20.4c-7.1,7.1-12.8,9.2-26.1,9.7
+              c-12.1,0.5-19.4-1.4-27.9-6.9c-5.3-3.4-13.8-11.8-16.9-16.5l-1.5-2.3l-8,7.8l-7.9,7.9l3,4.3c6.4,9.3,18,18.8,28.2,22.8
+              c10.8,4.4,16,5.3,29.8,5.2c14.9,0,21.6-1.4,32.5-6.3l6.7-3.1h34.1c19.3,0,37.6-0.5,42.2-1c30.8-3.8,51.2-19.4,56.2-43
+              c3.6-17.2,0.3-33.8-9-44.5c-6.3-7.3-19.8-14.3-31.1-16.2c-2.2-0.4-3.9-0.9-3.9-1.3c0-0.4,2.3-1.4,5-2.4
+              c20.5-6.9,32.1-26.9,28.7-49.6c-3.4-23.3-20.5-36.3-51.8-39.7c-5-0.5-39.3-0.9-81.3-0.9H165L165,149.4L165,149.4z M323,161.5
+              c16.9,4.4,23.2,12.4,23.2,29.2c0,10.7-2.1,16.4-8.2,22c-8.8,8.2-17.1,10.2-45,11.1l-20.2,0.6v-32.9v-32.9l21.6,0.5
+              C312.2,159.5,317.2,160,323,161.5z M326.3,244.4c11.4,2.6,16.4,5.1,22.3,11c7.3,7.3,9,12.1,8.9,24.1c-0.1,6.4-0.6,9.9-2.1,13.8
+              c-2.7,7.2-9.3,14.2-16.6,17.7c-10.2,5-16.8,6-42.6,6.4l-23.4,0.4v-37.8V242l23.8,0.5C312.9,242.9,322.3,243.4,326.3,244.4z"
+            />
           </motion.svg>
         </div>
       </div>
@@ -95,30 +100,27 @@ export default function SplashScreen({
           }
 
           .splash_logo {
-            stroke: rgb(255, 255, 255);
-            transition: all 0.7s ease-in-out;
-            animation: slide-up 0.5s ease-out forwards;
-            animation-delay: 3.5s;
-            fill: var(--main-bg-color);
-          }
-
-          .filled {
-            fill: white;
-            transform: scale(0.4);
+            width: 10%;
+            min-width: 100px;
+            height: 10%;
+            min-height: 100px;
+            animation: slide-up 0.3s ease-out forwards;
+            animation-delay: 3s;
           }
 
           @keyframes slide-up {
             0% {
-              transform: scale(0.4);
               opacity: 1;
             }
 
             40% {
-              transform: scale(0.6);
+              transform-origin: center;
+              transform: scale(1.2);
               opacity: 1;
             }
 
             100% {
+              transform-origin: center;
               transform: scale(0);
               opacity: 0;
             }

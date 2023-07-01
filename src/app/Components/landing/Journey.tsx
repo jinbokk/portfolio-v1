@@ -43,6 +43,7 @@ const journeyData = [
     duration: "test",
     desccription: (
       <>
+        
         <p>Since my high school days,</p>
         <p>
           I have been assisting my self-employed parents and naturally learning
@@ -50,6 +51,17 @@ const journeyData = [
         </p>
         <p>After graduating from college, when I was unsure of what to do,</p>
         <p>I worked as a manager at an outdoor product store.</p>
+        <ul>
+          <li>
+            <a
+              href="https://k2group.co.kr/main"
+              target="_blank"
+              className="highlight-link"
+            >
+              <span>K2 / Store Manager</span>
+            </a>
+          </li>
+        </ul>
       </>
     ),
   },
@@ -59,6 +71,17 @@ const journeyData = [
     desccription: (
       <>
         <p>Interior Designer</p>
+        <ul>
+          <li>
+            <a
+              href="https://company.hanssem.com/main.do"
+              target="_blank"
+              className="highlight-link"
+            >
+              <span>HANSSEM / Territorial Representative</span>
+            </a>
+          </li>
+        </ul>
       </>
     ),
   },
@@ -94,30 +117,6 @@ export default function Journey() {
 
         {/* pannel */}
         <div className="pannel-wrapper">
-          {activeTabId === 0 ? (
-            <div className="animation-wrapper">
-              <Architect />
-            </div>
-          ) : null}
-
-          {activeTabId === 1 ? (
-            <div className="animation-wrapper">
-              <Salesman />
-            </div>
-          ) : null}
-
-          {activeTabId === 2 ? (
-            <div className="animation-wrapper">
-              <InteriorDesigner />
-            </div>
-          ) : null}
-
-          {activeTabId === 3 ? (
-            <div className="animation-wrapper">
-              <DevGroup />
-            </div>
-          ) : null}
-
           {journeyData.map((item, index) => {
             return (
               <CSSTransition
@@ -132,6 +131,12 @@ export default function Journey() {
               </CSSTransition>
             );
           })}
+          <div className="animation-wrapper">
+            {activeTabId === 0 ? <Architect /> : null}
+            {activeTabId === 1 ? <Salesman /> : null}
+            {activeTabId === 2 ? <InteriorDesigner /> : null}
+            {activeTabId === 3 ? <DevGroup /> : null}
+          </div>
         </div>
       </div>
 
@@ -160,13 +165,12 @@ export default function Journey() {
           .pannel-wrapper {
             width: 100%;
             position: relative;
-             {
-              /* max-width: 900px; */
-            }
           }
 
           .animation-wrapper {
             position: absolute;
+            z-index: -1;
+            top: 0;
             width: 100%;
             height: 100%;
           }
