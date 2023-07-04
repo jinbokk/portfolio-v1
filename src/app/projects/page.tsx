@@ -1,6 +1,3 @@
-import Image from "next/image";
-import styles from "./projects.module.css";
-import Link from "next/link";
 import ProjectGraph from "@/app/components/landing/ProjectGraph";
 
 export default function Projects() {

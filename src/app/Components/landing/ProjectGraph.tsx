@@ -17,26 +17,26 @@ export default function ProjectGraph() {
       projectName: "THE JINBOK TIMES",
       projectDescription: "Newscatcher API를 사용한 뉴스 브라우징 웹 서비스",
       imageURL: "/images/card-the-jinbok-times.png",
-      path: "/projects/the-jinbok-times",
+      path: "/projects/THE_JINBOK_TIMES",
     },
     {
       projectName: "MUSICOR",
       projectDescription: "Sportify API를 사용한 컬러별 음악 추천 웹 서비스",
       imageURL: "/images/card-musicor.png",
-      path: "/projects/musicor",
+      path: "/projects/MUSICOR",
     },
     {
       projectName: "NETFLIX",
       projectDescription: "TMDB API를 사용한 NETFLIX 클론 코딩",
       imageURL: "/images/card-netflix.png",
-      path: "/projects/netflix",
+      path: "/projects/JB-NETFLIX",
     },
     {
       projectName: "EESO CAKE",
       projectDescription:
         "친누나가 운영 중인 주문제작 케이크 공방의 e-commerce 서비스",
       imageURL: "/images/card-eeso-cake.png",
-      path: "/projects/eeso-cake",
+      path: "/projects/eeso-cake-app",
     },
   ];
 

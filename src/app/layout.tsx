@@ -8,7 +8,7 @@ import "./globals.css";
 import { Roboto_Mono, Inconsolata, Inter } from "next/font/google";
 import { usePathname } from "next/navigation";
 import SplashScreen from "@/components/SplashScreen";
-import Logo from "./components/Logo";
+import Logo from "@/components/Logo";
 import Mouse from "@/util/Mouse";
 
 const inter = Inter({

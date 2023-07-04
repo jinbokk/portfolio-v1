@@ -1,3 +1,5 @@
+"use client"
+
 import { motion, useMotionTemplate } from "framer-motion";
 
 export default function Mouse({ mouseX, mouseY }) {

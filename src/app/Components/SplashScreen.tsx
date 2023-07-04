@@ -1,3 +1,5 @@
+"use client"
+
 import { Dispatch, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
