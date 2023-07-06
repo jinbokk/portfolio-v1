@@ -1,4 +1,4 @@
-import ProjectGraph from "@/app/components/landing/ProjectGraph";
+import ProjectGraph from "@/app/components/ProjectGraph";
 
 export default function Projects() {
   return (

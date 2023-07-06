@@ -1,6 +1,6 @@
 const md = require("markdown-it")();
 
-export default async function Readme({ project }) {
+export default async function Readme({ project }: { project: string }) {
   const getReadme = async () => {
     // GitHub API 엔드포인트 URL
     const url = `https://api.github.com/repos/jinbokk/${project}/readme`;

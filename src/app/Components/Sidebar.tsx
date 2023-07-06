@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import Image from "next/image";
 import { useLayoutEffect } from "react";
@@ -100,6 +100,10 @@ export default function Sidebar() {
             alt="github"
             width={30}
             height={30}
+            style={{
+              width: "30px",
+              height: "30px",
+            }}
           />
         </a>
 
@@ -112,84 +116,7 @@ export default function Sidebar() {
         <div className="line-2"></div>
       </div>
 
-      <style jsx>
-        {`
-          .menuContainer {
-            position: fixed;
-            top: 50px;
-            right: 50px;
-            height: 20%;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            justify-content: space-around;
-            z-index: 50;
-          }
-
-          .menuText {
-            font-size: 15px;
-            font-weight: bold;
-            color: white;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: 0.5s;
-            padding: 10px;
-            border-radius: 15px;
-          }
-
-          .menuText:hover {
-            opacity: 1;
-            transition: 0.5s;
-            background-color: rgba(255, 255, 255, 0.3);
-            border-radius: 15px;
-          }
-
-          .buttonContainer {
-            position: fixed;
-            bottom: 0;
-            right: 80px;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            align-items: center;
-            writing-mode: vertical-rl;
-            font-family: var(--font-roboto-mono);
-            z-index: 50;
-          }
-
-          .opacity {
-            opacity: 0.8;
-          }
-
-          .opacity:hover {
-            opacity: 1;
-            transition: 0.5s;
-          }
-
-          .email-text {
-            font-size: 13px;
-            letter-spacing: 2px;
-          }
-
-          .line-1 {
-            height: 70px;
-            width: 1px;
-            border: 1px var(--main-text-color) solid;
-            opacity: 0.5;
-            margin: 10px 0;
-            user-select: none;
-          }
-
-          .line-2 {
-            height: 100px;
-            width: 1px;
-            border: 1px var(--main-text-color) solid;
-            opacity: 0.5;
-            margin-top: 10px;
-            user-select: none;
-          }
-        `}
-      </style>
+      <style jsx>{``}</style>
     </>
   );
 }

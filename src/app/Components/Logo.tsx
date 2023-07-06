@@ -48,49 +48,7 @@ const Logo = () => {
 
       <style jsx>
         {`
-          .logo-container {
-            position: fixed;
-            z-index: 1000;
-            width: 60px;
-            height: 60px;
-            min-width: 50px;
-            min-height: 50px;
-            top: 3rem;
-            left: 3rem;
-          }
 
-          .logo-container:hover .logo-wrapper {
-            transform: translate(-3px, -4px);
-            transition: 0.3s;
-          }
-
-          .logo-wrapper {
-            position: relative;
-            z-index: 1;
-            transition: 0.3s;
-          }
-
-          .logo-path {
-            stroke: white;
-            stroke-width: 40px;
-            fill: var(--main-bg-color);
-          }
-
-          .logo-text {
-            fill: white;
-          }
-
-          .logo-bg-wrapper {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: -1;
-          }
-
-          .logo-bg {
-            stroke: none;
-            fill: white;
-          }
         `}
       </style>
     </div>

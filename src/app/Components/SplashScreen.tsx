@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { Dispatch, useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
@@ -8,6 +8,15 @@ export default function SplashScreen({
 }: {
   setIsLoading: Dispatch<React.SetStateAction<boolean>>;
 }) {
+  //* Splash Screen
+  const pathname: string = usePathname();
+  const isHome: boolean = pathname === "/";
+  const [isLoading, setIsLoading] = useState<boolean>(isHome);
+
+  useEffect(() => {
+    if (isLoading) return;
+  }, [isLoading]);
+
   const pathVariants = {
     hidden: {
       opacity: 0,
@@ -62,7 +71,7 @@ export default function SplashScreen({
             xmlns="http://www.w3.org/2000/svg"
             onAnimationComplete={() => setIsAnimationComplete(true)}
             viewBox="0 0 532.2 460.3"
-            style={{ width: "100%", height: "100%"}}
+            style={{ width: "100%", height: "100%" }}
           >
             <motion.path
               variants={pathVariants}

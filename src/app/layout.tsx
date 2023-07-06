@@ -1,7 +1,3 @@
-"use client";
-
-import { useMotionValue } from "framer-motion";
-import { useEffect, useState, MouseEvent } from "react";
 import Sidebar from "@/components/Sidebar";
 import "./globals.css";
 
@@ -40,40 +36,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  //* Splash Screen
-  const pathname: string = usePathname();
-  const isHome: boolean = pathname === "/";
-  const [isLoading, setIsLoading] = useState<boolean>(isHome);
-
-  useEffect(() => {
-    if (isLoading) return;
-  }, [isLoading]);
-
-  //* Mouse
-  let mouseX = useMotionValue(0);
-  let mouseY = useMotionValue(0);
-
-  function handleMouseMove({ currentTarget, clientX, clientY }: MouseEvent) {
-    let { left, top } = currentTarget.getBoundingClientRect();
-    mouseX.set(clientX - left);
-    mouseY.set(clientY - top);
-  }
-
   return (
     <html lang="ko">
       <body
         className={`${inter.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
       >
-        {isLoading && isHome ? (
-          <SplashScreen setIsLoading={setIsLoading} />
-        ) : (
-          <div className="relative" onMouseMove={handleMouseMove}>
-            <Mouse mouseX={mouseX} mouseY={mouseY} />
-            <Logo />
-            <Sidebar />
-            <main className="relative z-40">{children}</main>
-          </div>
-        )}
+        <Mouse />
+        <Logo />
+        <Sidebar />
+        {children}
       </body>
     </html>
   );

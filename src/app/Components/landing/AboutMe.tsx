@@ -32,6 +32,8 @@ export default function AboutMe() {
             quality={100}
             style={{
               objectFit: "contain",
+              width: "auto",
+              height: "auto",
               margin: "0 auto",
             }}
           />

@@ -7,15 +7,13 @@ import AboutMe from "@/components/landing/AboutMe";
 import Landing from "@/components/landing/Landing";
 
 export default function Home() {
-
-
   return (
-    <>
+    <main>
       <Landing />
       <AboutMe />
       <Journey />
       <Project />
       <GetInTouch />
-    </>
+    </main>
   );
 }

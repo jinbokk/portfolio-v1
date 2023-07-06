@@ -15,9 +15,8 @@ export default function Info() {
             height={600}
             style={{
               objectFit: "cover",
-              // maxWidth: "20vw",
-              // minWidth: "300px",
-              // height: "600px",
+              width: "auto",
+              height: "auto",
             }}
           />
         </div>

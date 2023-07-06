@@ -12,7 +12,6 @@
 
 body {
   max-width: 100vw;
-  height: 100%;
   overflow-x: hidden;
   color: var(--main-text-color);
   background: var(--main-bg-color);
@@ -32,6 +31,15 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(128, 128, 128, 0.5);
   border: 3px solid var(--main-bg-color);
   border-radius: 10px;
+}
+
+::-moz-selection {
+  background: rgb(0, 128, 122);
+  color: #fff;
+}
+::selection {
+  background: rgb(0, 128, 122);
+  color: #fff;
 }
 
 main {
@@ -98,4 +106,123 @@ p {
 .highlight-link:hover {
   color: var(--highlight-color);
   transition: 0.3s;
+}
+
+.menuContainer {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  z-index: 50;
+}
+
+.menuText {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: 0.5s;
+  padding: 10px;
+  border-radius: 15px;
+}
+
+.menuText:hover {
+  opacity: 1;
+  transition: 0.5s;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.buttonContainer {
+  position: fixed;
+  bottom: 0;
+  right: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  writing-mode: vertical-rl;
+  font-family: var(--font-roboto-mono);
+  z-index: 50;
+}
+
+.opacity {
+  opacity: 0.8;
+}
+
+.opacity:hover {
+  opacity: 1;
+  transition: 0.5s;
+}
+
+.email-text {
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.line-1 {
+  height: 70px;
+  width: 1px;
+  border: 1px var(--main-text-color) solid;
+  opacity: 0.5;
+  margin: 10px 0;
+  user-select: none;
+}
+
+.line-2 {
+  height: 100px;
+  width: 1px;
+  border: 1px var(--main-text-color) solid;
+  opacity: 0.5;
+  margin-top: 10px;
+  user-select: none;
+}
+
+.logo-container {
+  position: fixed;
+  z-index: 1000;
+  width: 60px;
+  height: 60px;
+  min-width: 50px;
+  min-height: 50px;
+  top: 3rem;
+  left: 3rem;
+}
+
+.logo-container:hover .logo-wrapper {
+  transform: translate(-3px, -4px);
+  transition: 0.3s;
+}
+
+.logo-wrapper {
+  position: relative;
+  z-index: 1;
+  transition: 0.3s;
+}
+
+.logo-path {
+  stroke: white;
+  stroke-width: 40px;
+  fill: var(--main-bg-color);
+}
+
+.logo-text {
+  fill: white;
+}
+
+.logo-bg-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.logo-bg {
+  stroke: none;
+  fill: white;
 }
