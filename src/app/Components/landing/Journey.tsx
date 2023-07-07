@@ -1,5 +1,3 @@
-"use client";
-
 import { useEffect, useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
 import Architect from "@/animation/Architect";

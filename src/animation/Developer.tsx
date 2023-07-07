@@ -27,7 +27,6 @@ export default function Architect() {
           fill: "none",
           stroke: "white",
           strokeWidth: 2,
-
         }}
       >
         <motion.path

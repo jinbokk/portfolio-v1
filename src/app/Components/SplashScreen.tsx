@@ -1,21 +1,16 @@
 "use client";
 
-import { Dispatch, useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 
-export default function SplashScreen({
-  setIsLoading,
-}: {
-  setIsLoading: Dispatch<React.SetStateAction<boolean>>;
-}) {
+export default function SplashScreen() {
   //* Splash Screen
-  const pathname: string = usePathname();
-  const isHome: boolean = pathname === "/";
-  const [isLoading, setIsLoading] = useState<boolean>(isHome);
 
-  useEffect(() => {
-    if (isLoading) return;
-  }, [isLoading]);
+  // const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  // useEffect(() => {
+  //   if (isLoading) return;
+  // }, [isLoading]);
 
   const pathVariants = {
     hidden: {
@@ -39,37 +34,38 @@ export default function SplashScreen({
     },
   };
 
-  const [isAnimationComplete, setIsAnimationComplete] = useState(false);
+  // const [isAnimationComplete, setIsAnimationComplete] = useState(false);
 
-  const splashContainerRef = useRef<HTMLInputElement>(null);
+  // const splashContainerRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => {
-    const splashContainer = splashContainerRef.current;
+  // useEffect(() => {
+  //   const splashContainer = splashContainerRef.current;
 
-    const handleAnimationEnd = () => {
-      setIsLoading(false);
-    };
+  //   const handleAnimationEnd = () => {
+  //     setIsLoading(false);
+  //   };
 
-    if (splashContainer) {
-      splashContainer.addEventListener("animationend", handleAnimationEnd);
-    }
+  //   if (splashContainer) {
+  //     splashContainer.addEventListener("animationend", handleAnimationEnd);
+  //   }
 
-    return () => {
-      if (splashContainer) {
-        splashContainer.removeEventListener("animationend", handleAnimationEnd);
-      }
-    };
-  }, []);
+  //   return () => {
+  //     if (splashContainer) {
+  //       splashContainer.removeEventListener("animationend", handleAnimationEnd);
+  //     }
+  //   };
+  // }, []);
 
   return (
     <>
-      <div className="splash_container" ref={splashContainerRef}>
+      <div className="splash_container">
+        {/* <div className="splash_container" ref={splashContainerRef}> */}
         <div className="splash_logo">
           <motion.svg
             initial="hidden"
             animate="visible"
             xmlns="http://www.w3.org/2000/svg"
-            onAnimationComplete={() => setIsAnimationComplete(true)}
+            // onAnimationComplete={() => setIsLoading(false)}
             viewBox="0 0 532.2 460.3"
             style={{ width: "100%", height: "100%" }}
           >

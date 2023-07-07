@@ -4,16 +4,33 @@ import Journey from "@/components/landing/Journey";
 import Project from "@/components/landing/Project";
 import GetInTouch from "@/components/landing/GetInTouch";
 import AboutMe from "@/components/landing/AboutMe";
-import Landing from "@/components/landing/Landing";
+import Me from "@/components/landing/Me";
+import SplashScreen from "./components/SplashScreen";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  // const [isLoading, setIsLoading] = useState(true);
+
+  // useEffect(() => {
+  //   const timer = setTimeout(() => {
+  //     setIsLoading(false);
+  //   }, 3300);
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   return (
-    <main>
-      <Landing />
-      <AboutMe />
-      <Journey />
-      <Project />
-      <GetInTouch />
-    </main>
+    <>
+      {/* {isLoading ? (
+        <SplashScreen />
+      ) : ( */}
+        <main>
+          <Me />
+          <AboutMe />
+          <Journey />
+          <Project />
+          <GetInTouch />
+        </main>
+      {/* )} */}
+    </>
   );
 }

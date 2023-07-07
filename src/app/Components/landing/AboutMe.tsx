@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profilePic from "public/images/profile_image_1.png";
 
 export default function AboutMe() {
   return (
@@ -18,25 +19,14 @@ export default function AboutMe() {
             to grow as a frontend developer, working closely with people to
             create meaningful experiences.<br></br>
             <br></br>Recently, I launched a website for my sister&apos;s cake
-            workshop using the MERN stack. Additionally, I am currently studying
+            workshop using the MERN stack.<br></br>I am currently studying
             TypeScript and Next.js!
           </h2>
         </div>
 
-        <div className="basis-1/3">
-          <Image
-            src="/images/profile_image_1.png"
-            alt=""
-            width={250}
-            height={250}
-            quality={100}
-            style={{
-              objectFit: "contain",
-              width: "auto",
-              height: "auto",
-              margin: "0 auto",
-            }}
-          />
+        {/* <div className="before:block before:absolute before:top-0 before:left-0 before:bg-red-500 before:w-full before:h-full basis-1/3 p-20"> */}
+        <div className="basis-1/3 p-20">
+          <Image src={profilePic} alt="profilePic" className="rounded-xl" />
         </div>
       </div>
     </section>

@@ -1,8 +1,21 @@
 export default function Loading() {
   return (
     <div>
-      LOADING
-      LOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADINGLOADING
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
+      <div>LOADING</div>
     </div>
   );
 }
