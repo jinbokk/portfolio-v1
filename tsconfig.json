@@ -24,7 +24,8 @@
       "@/*": ["src/*"],
       "@/components/*": ["src/app/components/*"],
       "@/animation/*": ["src/animation/*"],
-      "@/contents/*": ["src/app/contents/*"]
+      "@/contents/*": ["src/contents*"],
+      "@/hooks/*": ["src/hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],

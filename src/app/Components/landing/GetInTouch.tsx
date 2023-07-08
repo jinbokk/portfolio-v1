@@ -2,7 +2,7 @@ export default function GetInTouch() {
   return (
     <>
       <section>
-        <h1># what is next ?</h1>
+      <h1><span className="text-highlight">#</span> What is next ?</h1>
         <h2 className="w-full text-center">Get In Touch</h2>
 
         <p className="w-full text-center">

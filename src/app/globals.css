@@ -9,9 +9,13 @@
   --highlight-color-op: rgba(16, 195, 240, 0.4);
 }
 
+html,
 body {
   width: 100vw;
   overflow-x: hidden;
+}
+
+body {
   color: white;
   background: var(--background-color);
   font-family: var(--font-inconsolata);
@@ -38,10 +42,6 @@ body::-webkit-scrollbar-thumb {
 ::selection {
   background: rgb(0, 128, 122);
   color: #fff;
-}
-
-img {
-  margin: 0;
 }
 
 main {
@@ -73,11 +73,12 @@ ul li::before {
 
 h1 {
   border-bottom: 2px solid white;
+  /* border-color: var(--highlight-color); */
   padding-bottom: 5px;
   margin-bottom: 10px;
-  font-family: var(--font-inter);
+  font-family: var(--font-inconsolata);
   font-weight: bold;
-  font-size: 30px;
+  font-size: clamp(26px,5vw,35px);
   width: 100%;
 }
 
@@ -93,88 +94,4 @@ h3 {
   font-size: 2rem;
   font-weight: bold;
   font-family: var(--font-inter);
-}
-
-.highlight-link {
-  transition: 0.3s;
-}
-
-.highlight-link:hover {
-  color: var(--highlight-color);
-  transition: 0.3s;
-}
-
-.menuContainer {
-  position: fixed;
-  top: 50px;
-  right: 50px;
-  height: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: space-around;
-  z-index: 50;
-}
-
-.menuText {
-  font-size: 15px;
-  font-weight: bold;
-  color: white;
-  cursor: pointer;
-  opacity: 0.8;
-  transition: 0.5s;
-  padding: 10px;
-  border-radius: 15px;
-}
-
-.menuText:hover {
-  opacity: 1;
-  transition: 0.5s;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-}
-
-.buttonContainer {
-  position: fixed;
-  bottom: 0;
-  right: 80px;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  writing-mode: vertical-rl;
-  font-family: var(--font-roboto-mono);
-  z-index: 50;
-}
-
-.opacity {
-  opacity: 0.8;
-}
-
-.opacity:hover {
-  opacity: 1;
-  transition: 0.5s;
-}
-
-.email-text {
-  font-size: 13px;
-  letter-spacing: 2px;
-}
-
-.line-1 {
-  height: 70px;
-  width: 1px;
-  border: 1px white solid;
-  opacity: 0.5;
-  margin: 10px 0;
-  user-select: none;
-}
-
-.line-2 {
-  height: 100px;
-  width: 1px;
-  border: 1px white solid;
-  opacity: 0.5;
-  margin-top: 10px;
-  user-select: none;
 }

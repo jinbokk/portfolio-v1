@@ -53,7 +53,7 @@ export default function Project() {
   return (
     <>
       <section>
-        <h1># some things i&apos;ve built</h1>
+      <h1><span className="text-highlight">#</span> Some things i&apos;ve built</h1>
 
         {projectData.map((item, index) => {
           return (

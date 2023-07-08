@@ -18,7 +18,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body
-        className={`scroll-smooth antialiased ${inter.variable} ${inconsolata.variable} ${roboto_mono.variable}`}
+        className={`scroll-smooth antialiased ${inconsolata.variable} ${inter.variable} ${roboto_mono.variable}`}
       >
         <Mouse />
         <Navbar />

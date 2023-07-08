@@ -4,7 +4,7 @@ import Journey from "@/components/landing/Journey";
 import Project from "@/components/landing/Project";
 import GetInTouch from "@/components/landing/GetInTouch";
 import AboutMe from "@/components/landing/AboutMe";
-import Me from "@/components/landing/Me";
+import Me from "@/app/components/landing/Hello";
 import SplashScreen from "./components/SplashScreen";
 import { useEffect, useState } from "react";
 

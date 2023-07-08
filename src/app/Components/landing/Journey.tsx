@@ -41,7 +41,6 @@ const journeyData = [
     duration: "test",
     desccription: (
       <>
-        
         <p>Since my high school days,</p>
         <p>
           I have been assisting my self-employed parents and naturally learning
@@ -99,7 +98,10 @@ export default function Journey() {
 
   return (
     <section>
-      <h1># my journey before becoming a developer</h1>
+      <h1>
+        <span className="text-highlight">#</span> My journey before becoming a
+        developer
+      </h1>
 
       <div className="flex grow w-full h-full justify-start">
         {/* button */}
