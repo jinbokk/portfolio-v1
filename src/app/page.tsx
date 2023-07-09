@@ -26,8 +26,8 @@ export default function Home() {
         <main>
           <Me />
           <AboutMe />
-          <Journey />
           <Project />
+          <Journey />
           <GetInTouch />
         </main>
       {/* )} */}

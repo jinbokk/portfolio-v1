@@ -27,8 +27,9 @@ module.exports = {
       },
 
       fontFamily: {
-        sans: ["var(--font-inter)"],
-        serif: ["var(--font-roboto_mono)", "var(--font-inconsolata)"],
+        inter: ["var(--font-inter)"],
+        roboto: ["var(--font-roboto-mono)"],
+        incon: ["var(--font-inconsolata)"],
       },
 
       aspectRatio: {

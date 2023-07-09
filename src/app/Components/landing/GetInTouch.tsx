@@ -2,56 +2,32 @@ export default function GetInTouch() {
   return (
     <>
       <section>
-      <h1><span className="text-highlight">#</span> What is next ?</h1>
-        <h2 className="w-full text-center">Get In Touch</h2>
+        <h1>
+          <span className="text-highlight">#</span> What&apos;s next ?
+        </h1>
 
-        <p className="w-full text-center">
-          Thanks for taking the time to review my portfolio !
-        </p>
-        <p className="w-full text-center">
-          I&apos;m a fresh software developer, ready to put my effort for the job.
-        </p>
-        <p className="w-full text-center">
-          I&apos;m eager to seize any chances to grow and expand my skills.
-        </p>
-        <p className="w-full text-center">
-          If you have any questions or simply want to connect, feel free to
-          reach out to me !
-        </p>
-        <p className="w-full text-center"></p>
+        <div className="flex flex-col justify-center items-center mx-auto">
+          <h2 className="w-full text-center text-3xl font-bold tracking-wider text-highlight my-10">
+            Get In Touch
+          </h2>
 
-        <a
-          href="mailto:eyelash1024@naver.com"
-          className="email-link mx-auto my-20"
-        >
-          Say Hello
-        </a>
+          <p className="opacity-80 font-inter w-3/4 text-center leading-loose text-sm lg:text-lg lg:leading-loose lg:max-w-[1000px] ">
+            Thanks for taking the time to review my portfolio, I&apos;m a fresh
+            software developer, ready to put my effort for the job. I&apos;m
+            eager to seize any chances to grow and expand my skills. If you have
+            any questions or simply want to connect, feel free to reach out to
+            me.
+          </p>
+
+          <a
+            href="mailto:eyelash1024@naver.com"
+            className="text-highlight bg-background border border-highlight rounded-md mt-12 px-6 py-3
+            hover:shadow-[4px_4px_0_0_rgb(16,240,221)] hover:-translate-x-1 hover:-translate-y-1 duration-300"
+          >
+            Say Hello
+          </a>
+        </div>
       </section>
-
-      <style jsx>
-        {`
-          .email-link {
-            color: var(--highlight-color);
-            background-color: transparent;
-            border: 1px solid var(--highlight-color);
-            border-radius: 5px;
-            padding: 1.25rem 1.75rem;
-            font-size: 2rem;
-            font-family: var(--font-roboto-mono);
-            line-height: 1;
-            text-decoration: none;
-            transition: 0.3s;
-            margin-top: 50px;
-          }
-
-          .email-link:hover,
-          .email-link:focus-visible {
-            outline: none;
-            box-shadow: 4px 4px 0 0 var(--highlight-color);
-            transform: translate(-5px, -5px);
-          }
-        `}
-      </style>
     </>
   );
 }

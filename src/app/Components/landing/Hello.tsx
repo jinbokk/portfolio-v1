@@ -20,7 +20,7 @@ export default function Hello() {
 
   return (
     <>
-      <section className="relative mb-60 flex justify-center">
+      <section className="relative mb-32 flex justify-center">
         <div
           className="absolute bottom-44 -right-20 origin-right scale-[2] opacity-50
           md:w-full md:h-fit md:scale-[1.5] md:opacity-50 md:-right-44

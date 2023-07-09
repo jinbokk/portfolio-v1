@@ -1,3 +1,4 @@
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Image from "next/image";
 import GithubSimpleLogo from "public/icons/github-logo-simple.svg";
 import WebsiteClickLogo from "public/icons/website-click-logo.svg";
@@ -12,7 +13,7 @@ const projectData = [
     github: "https://github.com/jinbokk/eeso-cake-app",
     url: "https://eeso-cake.com",
     description:
-      "This is a website for a custom cake studio operated by my sister. The website includes a feature that retrieves cake images from various categories by crawling her Instagram accounts. Additionally, ordering and payment process has been implemented through a contract with a payment gateway (Danal) company.",
+      "This is a website for a custom cake studio. The website includes a feature that retrieves cake images from various categories by crawling Instagram accounts. Additionally, ordering and payment process has been implemented through a contract with a payment gateway (Danal) company.",
   },
   {
     title: "NETFLIX",
@@ -50,13 +51,108 @@ const projectData = [
 ];
 
 export default function Project() {
+  const windowWidth = useWindowDimensions().width;
+
   return (
     <>
       <section>
-      <h1><span className="text-highlight">#</span> Some things i&apos;ve built</h1>
+        <h1>
+          <span className="text-highlight">#</span> Some things i&apos;ve built
+        </h1>
 
         {projectData.map((item, index) => {
-          return (
+          return windowWidth && windowWidth < 768 ? (
+            <div
+              key={index}
+              className="relative drop-shadow-lg rounded-md bg-teal-700/[.2] px-4 py-7 mb-10"
+            >
+              <div>
+                <div
+                  className={`mb-1 text-highlight text-sm ${
+                    index % 2 === 0 ? "text-end" : "text-start"
+                  }`}
+                >
+                  Personal Project
+                </div>
+                <div
+                  className={`text-xs opacity-80 ${
+                    index % 2 === 0 ? "text-end" : "text-start"
+                  }`}
+                >
+                  {item.duration}
+                </div>
+              </div>
+
+              <a href={item.url} target="_blank" className="text-highlight">
+                <h3
+                  className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
+                >
+                  {item.title}
+                </h3>
+              </a>
+
+              <div className="opacity-80">
+                <div
+                  className={`relative z-10 ${
+                    index % 2 === 0 ? "text-end" : "text-start"
+                  }`}
+                >
+                  <p className="font-inter text-sm leading-relaxed mb-10">
+                    {item.description}
+                  </p>
+                  <div
+                    className={`my-4 flex ${
+                      index % 2 === 0 ? "justify-end" : "justify-start"
+                    }`}
+                  >
+                    {item.stack.map((stack, stackIndex) => {
+                      return (
+                        <span key={stackIndex} className="mx-2 text-sm">
+                          {stack}
+                        </span>
+                      );
+                    })}
+                  </div>
+
+                  <div
+                    className={`flex items-center ${
+                      index % 2 === 0 ? "justify-end" : "justify-start"
+                    }`}
+                  >
+                    <a
+                      href={item.github}
+                      target="_blank"
+                      className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                    >
+                      <GithubSimpleLogo />
+                    </a>
+                    <a
+                      href={item.url}
+                      target="_blank"
+                      className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                    >
+                      <WebsiteClickLogo />
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <a
+                href={item.url}
+                target="_blank"
+                className="absolute top-0 left-0 w-full h-full m-0 -z-10"
+              >
+                <Image
+                  priority
+                  src={item.preview}
+                  alt=""
+                  width={700}
+                  height={700}
+                  className="w-full h-full object-cover opacity-[5%]"
+                />
+              </a>
+            </div>
+          ) : (
             <div
               key={index}
               className={`flex justify-center items-center py-20 ${
@@ -69,22 +165,28 @@ export default function Project() {
                 }`}
               >
                 <div
-                  className={`project-overline ${
-                    index % 2 === 0 ? "text-end" : "text-start"
-                  }`}
+                  className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
                 >
-                  <div className="mb-1">Personal Project</div>
-                  <div className="text-sm">{item.duration}</div>
+                  <div className="mb-1 font-bold text-highlight">
+                    Personal Project
+                  </div>
+                  <div className="text-sm opacity-80">{item.duration}</div>
                 </div>
-                <a href={item.url} target="_blank" className="title-wrapper">
-                  <h3
-                    className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
+                <a
+                  href={item.url}
+                  target="_blank"
+                  className="hover:text-highlight duration-300"
+                >
+                  <div
+                    className={`text-4xl my-2 font-bold font-inter ${
+                      index % 2 === 0 ? "text-end" : "text-start"
+                    }`}
                   >
                     {item.title}
-                  </h3>
+                  </div>
                 </a>
                 <p
-                  className={`description ${
+                  className={`relative bg-highlight-dark drop-shadow-lg font-inter leading-relaxed z-10 p-4 ${
                     index % 2 === 0 ? "text-end" : "text-start"
                   }`}
                 >
@@ -108,13 +210,20 @@ export default function Project() {
                     index % 2 === 0 ? "justify-end" : "justify-start"
                   }`}
                 >
-                  <a href={item.github} target="_blank" className="logo mx-2">
+                  <a
+                    href={item.github}
+                    target="_blank"
+                    className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                  >
                     <GithubSimpleLogo />
                   </a>
-                  <a href={item.url} target="_blank" className="logo mx-2">
+                  <a
+                    href={item.url}
+                    target="_blank"
+                    className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                  >
                     <WebsiteClickLogo />
                   </a>
-                  <div className="logo mx-2"></div>
                 </div>
               </div>
 
@@ -126,14 +235,17 @@ export default function Project() {
                 <a
                   href={item.url}
                   target="_blank"
-                  className="project-preview-image-top mx-2"
+                  className="w-fit h-fit m-0 z-1
+                  after:absolute after:top-0 after:w-full after:h-full after:bg-gray-500 after:mix-blend-multiply
+                  hover:after:bg-transparent after:duration-300"
                 >
                   <Image
+                    priority
                     src={item.preview}
                     alt=""
                     width={700}
                     height={700}
-                    className="project-preview-image"
+                    className="w-full h-full"
                   />
                 </a>
               </div>
@@ -141,75 +253,6 @@ export default function Project() {
           );
         })}
       </section>
-
-      <style jsx>
-        {`
-          .title-wrapper {
-            transition: 0.3s;
-          }
-
-          .title-wrapper:hover {
-            color: var(--highlight-color);
-            transition: 0.3s;
-          }
-
-          .description {
-            background-color: var(--highlight-color-dark);
-            color: white;
-            box-shadow: rgba(0, 0, 0) 0px 4px 12px;
-            padding: 1rem;
-            position: relative;
-            z-index: 2;
-          }
-
-          .project-overline {
-            color: var(--highlight-color);
-          }
-
-          .project-preview-image-top {
-            position: relative;
-            display: block;
-            width: fit-content;
-            height: fit-content;
-            margin: 0;
-            z-index: 1;
-          }
-
-          .project-preview-image-top:hover::before {
-            background-color: transparent;
-            transition: 0.3s;
-          }
-
-          .project-preview-image-top::before {
-            content: "";
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background-color: gray;
-            mix-blend-mode: multiply;
-            transition: 0.3s;
-          }
-
-          .project-preview-image {
-            opacity: 0.5;
-          }
-
-          .stack-wrapper {
-            display: flex;
-            margin: 0.6rem 0;
-          }
-
-          .logo {
-            cursor: pointer;
-            transition: 0.2s;
-          }
-
-          .logo:hover {
-            color: var(--highlight-color);
-            transition: 0.2s;
-          }
-        `}
-      </style>
     </>
   );
 }

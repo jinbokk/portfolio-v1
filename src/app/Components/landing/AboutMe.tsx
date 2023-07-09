@@ -44,7 +44,7 @@ export default function AboutMe() {
            "
           >
             <Image
-              fill
+              priority
               src={profilePic}
               alt="profilePic"
               className="rounded-xl"
