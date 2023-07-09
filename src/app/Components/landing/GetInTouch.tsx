@@ -1,7 +1,7 @@
 export default function GetInTouch() {
   return (
     <>
-      <section>
+      <section id="contact">
         <h1>
           <span className="text-highlight">#</span> What&apos;s next ?
         </h1>

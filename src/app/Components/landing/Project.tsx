@@ -1,5 +1,6 @@
 import useWindowDimensions from "@/hooks/useWindowDimensions";
 import Image from "next/image";
+import Link from "next/link";
 import GithubSimpleLogo from "public/icons/github-logo-simple.svg";
 import WebsiteClickLogo from "public/icons/website-click-logo.svg";
 
@@ -11,9 +12,10 @@ const projectData = [
     time: "2mo",
     stack: ["React", "Redux", "MongoDB", "Node.js", "AWS EC2"],
     github: "https://github.com/jinbokk/eeso-cake-app",
+    detail: "/projects/eeso-cake-app",
     url: "https://eeso-cake.com",
     description:
-      "This is a website for a custom cake studio. The website includes a feature that retrieves cake images from various categories by crawling Instagram accounts. Additionally, ordering and payment process has been implemented through a contract with a payment gateway (Danal) company.",
+      "This is a website for a custom cake studio. The website includes a feature that retrieves cake images from various categories by crawling Instagram accounts. Additionally, ordering and payment process has been implemented through a contract with a payment gateway company (Danal) .",
   },
   {
     title: "NETFLIX",
@@ -23,6 +25,7 @@ const projectData = [
     stack: ["React", "Redux"],
     github: "https://github.com/jinbokk/JB-NETFLIX",
     url: "https://netflix-jinbokk.netlify.app",
+    detail: "/projects/JB-NETFLIX",
     description:
       "This website is a movie information lookup platform that resembles the design of NETFLIX. It uses The Movie Database (TMDB) API to retrieve movie details and creates a dynamic user experience by automatically playing movie trailers.",
   },
@@ -34,6 +37,7 @@ const projectData = [
     stack: ["HTML", "CSS", "JAVASCRIPT"],
     github: "https://github.com/jinbokk/MUSICOR",
     url: "https://musicor.netlify.app",
+    detail: "/projects/MUSICOR",
     description:
       "This web app recommends music based on colors you choose. Each color represents a different feeling, and the app uses Spotify API to suggest songs that match that feeling. So, when user pick a color, the app suggests music that fits that mood.",
   },
@@ -45,6 +49,7 @@ const projectData = [
     stack: ["HTML", "CSS", "JAVASCRIPT"],
     github: "https://github.com/jinbokk/THE_JINBOK_TIMES",
     url: "https://jinbok-news.netlify.app",
+    detail: "/projects/THE_JINBOK_TIMES",
     description:
       "This is my first web development project, a news browsing website. Using the NewsCatcher API, I implemented a feature to browse news articles from various media outlets based on different categories. The website also features a responsive web design.",
   },
@@ -55,7 +60,7 @@ export default function Project() {
 
   return (
     <>
-      <section>
+      <section id="projects">
         <h1>
           <span className="text-highlight">#</span> Some things i&apos;ve built
         </h1>
@@ -83,13 +88,13 @@ export default function Project() {
                 </div>
               </div>
 
-              <a href={item.url} target="_blank" className="text-highlight">
+              <Link href={item.detail} className="text-highlight">
                 <h3
                   className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
                 >
                   {item.title}
                 </h3>
-              </a>
+              </Link>
 
               <div className="opacity-80">
                 <div
@@ -137,9 +142,8 @@ export default function Project() {
                 </div>
               </div>
 
-              <a
-                href={item.url}
-                target="_blank"
+              <Link
+                href={item.detail}
                 className="absolute top-0 left-0 w-full h-full m-0 -z-10"
               >
                 <Image
@@ -150,7 +154,7 @@ export default function Project() {
                   height={700}
                   className="w-full h-full object-cover opacity-[5%]"
                 />
-              </a>
+              </Link>
             </div>
           ) : (
             <div
@@ -172,9 +176,8 @@ export default function Project() {
                   </div>
                   <div className="text-sm opacity-80">{item.duration}</div>
                 </div>
-                <a
-                  href={item.url}
-                  target="_blank"
+                <Link
+                  href={item.detail}
                   className="hover:text-highlight duration-300"
                 >
                   <div
@@ -184,7 +187,7 @@ export default function Project() {
                   >
                     {item.title}
                   </div>
-                </a>
+                </Link>
                 <p
                   className={`relative bg-highlight-dark drop-shadow-lg font-inter leading-relaxed z-10 p-4 ${
                     index % 2 === 0 ? "text-end" : "text-start"
@@ -232,9 +235,8 @@ export default function Project() {
                   index % 2 === 0 ? "items-end left-20" : " right-20"
                 }`}
               >
-                <a
-                  href={item.url}
-                  target="_blank"
+                <Link
+                  href={item.detail}
                   className="w-fit h-fit m-0 z-1
                   after:absolute after:top-0 after:w-full after:h-full after:bg-gray-500 after:mix-blend-multiply
                   hover:after:bg-transparent after:duration-300"
@@ -247,7 +249,7 @@ export default function Project() {
                     height={700}
                     className="w-full h-full"
                   />
-                </a>
+                </Link>
               </div>
             </div>
           );

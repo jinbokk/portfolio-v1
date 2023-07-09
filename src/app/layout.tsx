@@ -16,9 +16,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko">
+    <html lang="ko" className="scroll-smooth antialiased">
       <body
-        className={`scroll-smooth antialiased ${inconsolata.variable} ${inter.variable} ${roboto_mono.variable}`}
+        className={`${inconsolata.variable} ${inter.variable} ${roboto_mono.variable}`}
       >
         <Mouse />
         <Navbar />

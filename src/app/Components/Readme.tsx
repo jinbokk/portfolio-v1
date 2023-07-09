@@ -1,4 +1,11 @@
-const md = require("markdown-it")();
+// import eesocake from "/public/images/portfolio_eesocake.png"
+// import jinbokNews from "/public/images/portfolio_jinbokNews.png"
+// import musicor from "/public/images/portfolio_musicor_edited.png"
+// import netflix from "/public/images/portfolio_netflix.png"
+
+const md = require("markdown-it")({
+  linkify: true,
+});
 
 export default async function Readme({ project }: { project: string }) {
   const getReadme = async () => {
@@ -23,6 +30,9 @@ export default async function Readme({ project }: { project: string }) {
   const readmeContent = await getReadme();
 
   return (
-    <div dangerouslySetInnerHTML={{ __html: md.render(readmeContent) }}></div>
+      <div
+        id="readme"
+        dangerouslySetInnerHTML={{ __html: md.render(readmeContent) }}
+      ></div>
   );
 }

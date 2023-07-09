@@ -3,7 +3,7 @@ import profilePic from "public/images/profile_image_1.png";
 
 export default function AboutMe() {
   return (
-    <section>
+    <section id="about">
       <h1>
         <span className="text-highlight">#</span> About me
       </h1>

@@ -65,6 +65,12 @@ export default function Navbar() {
         "-=0.3"
       )
       .fromTo(
+        ".navMenu-4",
+        { opacity: 0, x: 100 },
+        { opacity: 1, x: 0, duration: 0.5 },
+        "-=0.3"
+      )
+      .fromTo(
         ".buttonContainer",
         { opacity: 0 },
         { opacity: 0.8, duration: 1, ease: "expo.power4" }
@@ -75,7 +81,7 @@ export default function Navbar() {
     <>
       {windowWidth && windowWidth < 768 ? (
         <nav className="fixed z-50 w-full">
-          <div className="flex justify-between items-center backdrop-blur-sm border-b border-highlight">
+          <div className="flex h-[60px] justify-between items-center backdrop-blur-sm border-b border-highlight">
             {/* 
             //* navLogo
               */}
@@ -88,7 +94,7 @@ export default function Navbar() {
                 className="relative z-40 top-[3px]"
               >
                 <path
-                  className="stroke-highlight stroke-bold fill-background"
+                  className="stroke-highlight stroke-[25px] fill-background"
                   d="M14.4,230.2L140.1,12.5h252l125.7,217.7L392.1,447.8h-252L14.4,230.2z"
                 />
                 <path
@@ -106,7 +112,7 @@ export default function Navbar() {
             </Link>
 
             <div className="relative z-50 my-3 mx-5 ">
-              <Hamburger toggled={isOpen} toggle={setOpen} />
+              <Hamburger toggled={isOpen} toggle={setOpen} color="var(--highlight-color)"/>
             </div>
           </div>
 
@@ -121,15 +127,18 @@ export default function Navbar() {
                  //* navMenus
                  */}
               <ul>
-                <Link href="/projects">
-                  <li className="my-8 py-2 text-xl">PROJECTS</li>
-                </Link>
-                <Link href="/info">
-                  <li className="my-8 py-2 text-xl">INFO</li>
-                </Link>
-                <Link href="/contact">
-                  <li className="my-8 py-2 text-xl">CONTACT</li>
-                </Link>
+                <a href="/#about" className="navMenu-1 z-40">
+                  <li>ABOUT</li>
+                </a>
+                <a href="/#projects" className="navMenu-2 z-40">
+                  <li>PROJECTS</li>
+                </a>
+                <a href="/#journey" className="navMenu-3 z-40">
+                  <li>JOURNEY</li>
+                </a>
+                <a href="/#contact" className="navMenu-4 z-40">
+                  <li>CONTACT</li>
+                </a>
               </ul>
 
               <a
@@ -186,7 +195,7 @@ export default function Navbar() {
               className="relative z-40 group-hover:-translate-x-1 group-hover:-translate-y-1 ease-in-out duration-300 "
             >
               <path
-                className="stroke-highlight stroke-bold fill-background"
+                className="stroke-highlight stroke-[25px] fill-background"
                 d="M14.4,230.2L140.1,12.5h252l125.7,217.7L392.1,447.8h-252L14.4,230.2z"
               />
               <path
@@ -220,15 +229,18 @@ export default function Navbar() {
           //* navMenus
             */}
           <ul className="group fixed z-50 top-12 right-14 flex flex-col [&>a]:my-4">
-            <Link href="/projects" className="navMenu-1 z-40">
+            <a href="/#about" className="navMenu-1 z-40">
+              <li className="hover:text-highlight duration-300">ABOUT</li>
+            </a>
+            <a href="/#projects" className="navMenu-2 z-40">
               <li className="hover:text-highlight duration-300">PROJECTS</li>
-            </Link>
-            <Link href="/info" className="navMenu-2 z-40">
-              <li className="hover:text-highlight duration-300">INFO</li>
-            </Link>
-            <Link href="/contact" className="navMenu-3 z-40">
+            </a>
+            <a href="/#journey" className="navMenu-3 z-40">
+              <li className="hover:text-highlight duration-300">JOURNEY</li>
+            </a>
+            <a href="/#contact" className="navMenu-4 z-40">
               <li className="hover:text-highlight duration-300">CONTACT</li>
-            </Link>
+            </a>
           </ul>
 
           {/* 

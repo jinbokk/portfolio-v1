@@ -222,12 +222,12 @@ export default function Journey() {
   const windowWidth = useWindowDimensions().width;
 
   return (
-    <section>
+    <section id="journey" className="h-fit">
       <h1>
         <span className="text-highlight">#</span> My little journey
       </h1>
 
-      <div className="flex flex-col md:flex-row lg:flex-row grow w-full h-full justify-start pt-5">
+      <div className="min-h-[500px] flex flex-col md:flex-row lg:flex-row w-full h-full justify-start pt-5">
         {windowWidth && windowWidth < 768 ? (
           <div className="flex flex-row w-full overflow-x-scroll pb-6 mb-3 justify-start">
             {journeyData.map((item, index) => {
@@ -292,9 +292,9 @@ export default function Journey() {
             );
           })}
           <div
-            className="absolute -z-10 mx-[10%] h-full opacity-70 scale-[1.5] -bottom-56
-          lg:top-0 lg:scale-[1]
-          md:top-0 md:scale-[1]"
+            className="absolute -z-10 mx-[10%] h-full opacity-70 scale-[1.5] -bottom-64
+          lg:-bottom-36 lg:scale-[1]
+          "
           >
             {activeTabId === 0 ? <InteriorDesigner /> : null}
             {activeTabId === 1 ? <Salesman /> : null}
