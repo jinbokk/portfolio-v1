@@ -1,8 +1,8 @@
 import useWindowDimensions from "@hooks/useWindowDimensions";
 import Image from "next/image";
 import Link from "next/link";
-import GithubSimpleLogo from "public/icons/github-logo-simple.svg";
-import WebsiteClickLogo from "public/icons/website-click-logo.svg";
+import GithubSimpleLogo from "/public/icons/github-logo-simple.svg";
+import WebsiteClickLogo from "/public/icons/website-click-logo.svg";
 
 const projectData = [
   {

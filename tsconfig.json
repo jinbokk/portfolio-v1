@@ -19,13 +19,13 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",
+    "baseUrl": "src",
     "paths": {
-      "@components/*": ["src/app/components/*"],
-      "@animation/*": ["src/animation/*"],
-      "@contents/*": ["src/contents/*"],
-      "@util/*": ["src/util/*"],
-      "@hooks/*": ["src/hooks/*"]
+      "@components/*": ["app/components/*"],
+      "@animation/*": ["animation/*"],
+      "@contents/*": ["contents/*"],
+      "@util/*": ["util/*"],
+      "@hooks/*": ["hooks/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
