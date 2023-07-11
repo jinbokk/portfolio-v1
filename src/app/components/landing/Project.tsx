@@ -124,12 +124,12 @@ export default function Project() {
                       index % 2 === 0 ? "" : "flex-row-reverse"
                     }`}
                   >
-                    <a
+                    <Link
                       href={item.detail}
                       className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
                     >
                       readme.md
-                    </a>
+                    </Link>
                     <a
                       href={item.github}
                       target="_blank"
@@ -220,12 +220,12 @@ export default function Project() {
                     index % 2 === 0 ? "" : "flex-row-reverse"
                   }`}
                 >
-                  <a
+                  <Link
                     href={item.detail}
                     className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
                   >
                     readme.md
-                  </a>
+                  </Link>
                   <a
                     href={item.github}
                     target="_blank"

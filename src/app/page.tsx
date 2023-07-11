@@ -29,7 +29,7 @@ import { AnimatePresence, motion, useInView } from "framer-motion";
 // }
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   return (
     <>
