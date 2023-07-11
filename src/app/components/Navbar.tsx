@@ -10,13 +10,13 @@ import useWindowDimensions from "@hooks/useWindowDimensions";
 import { Divide as Hamburger } from "hamburger-react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-export default function Navbar({ navMenus, projects = false }) {
+export default function Navbar({ navMenus }: { navMenus: string[] }) {
   //* Responsive
   const [isOpen, setOpen] = useState(false);
   const windowWidth = useWindowDimensions().width;
 
   //* menuHighlight
-  const [currentMenu, setCurrentMenu] = useState(undefined);
+  const [currentMenu, setCurrentMenu] = useState<string | undefined>(undefined);
 
   useLayoutEffect(() => {
     const tl = gsap.timeline();
@@ -112,7 +112,7 @@ export default function Navbar({ navMenus, projects = false }) {
           >
             <aside className="fixed z-40 top-0 right-0 w-[70vw] h-screen bg-black opacity-90 flex flex-col justify-center items-center">
               <ul>
-                {navMenus.map((menu, index) => {
+                {navMenus.map((menu: string, index: number) => {
                   return (
                     <a
                       key={index}
@@ -210,7 +210,7 @@ export default function Navbar({ navMenus, projects = false }) {
           </Link>
 
           <ul className="group fixed z-50 top-12 right-14 flex flex-col [&>a]:my-4 duration-300">
-            {navMenus.map((menu, index) => {
+            {navMenus.map((menu: string, index: number) => {
               return (
                 <a
                   key={index}

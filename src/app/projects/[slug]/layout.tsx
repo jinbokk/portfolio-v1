@@ -1,6 +1,12 @@
 import NavbarProjects from "@components/NavbarProjects";
 
-export default function Layout({ children, params }) {
+export default function Layout({
+  children,
+  params,
+}: {
+  children: React.ReactNode;
+  params: string;
+}) {
   return (
     <>
       <NavbarProjects

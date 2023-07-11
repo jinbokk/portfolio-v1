@@ -1,7 +1,7 @@
 import Navbar from "@components/Navbar";
 import Readme from "@components/Readme";
 
-export default function Page({ params }) {
+export default function Page({ params }: { params: { slug: string } }) {
   return (
     <section>
       {/* <Navbar
