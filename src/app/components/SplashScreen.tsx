@@ -3,7 +3,11 @@
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-export default function SplashScreen({ setIsLoading }) {
+export default function SplashScreen({
+  setIsLoading,
+}: {
+  setIsLoading: React.Dispatch<React.SetStateAction<boolean>>;
+}) {
   const containerTransition = 1;
   const pathTransition = 1;
   const LogoTransition = 0.5;
@@ -39,7 +43,6 @@ export default function SplashScreen({ setIsLoading }) {
       },
     },
   };
-
 
   return (
     <AnimatePresence>
