@@ -1,8 +1,6 @@
 import "./globals.css";
 import { inter, roboto_mono, inconsolata } from "../util/fonts";
-import Navbar from "@components/Navbar";
 import Mouse from "@util/Mouse";
-import SplashScreen from "./components/SplashScreen";
 
 export const metadata = {
   title: "Lee Jinbok's Portfolio",

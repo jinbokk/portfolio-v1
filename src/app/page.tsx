@@ -1,6 +1,6 @@
 "use client";
 
-import Navbar from "./components/Navbar";
+import Navbar from "@components/Navbar";
 import Journey from "@components/landing/Journey";
 import Project from "@components/landing/Project";
 import GetInTouch from "@components/landing/GetInTouch";
