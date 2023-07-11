@@ -127,7 +127,6 @@ export default function Project() {
                     <Link
                       href={item.detail}
                       className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
-                      replace
                     >
                       readme.md
                     </Link>
@@ -152,7 +151,6 @@ export default function Project() {
               <Link
                 href={item.detail}
                 className="absolute top-0 left-0 w-full h-full m-0 -z-10"
-                replace
               >
                 <Image
                   priority
@@ -187,7 +185,6 @@ export default function Project() {
                 <Link
                   href={item.detail}
                   className="hover:text-highlight duration-300"
-                  replace
                 >
                   <div
                     className={`text-4xl my-2 font-bold font-inter ${
@@ -225,7 +222,6 @@ export default function Project() {
                   <Link
                     href={item.detail}
                     className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
-                    replace
                   >
                     readme.md
                   </Link>
@@ -256,7 +252,6 @@ export default function Project() {
                   className="w-fit h-fit m-0 z-1
                   after:absolute after:top-0 after:w-full after:h-full after:bg-gray-500 after:mix-blend-multiply
                   hover:after:bg-transparent after:duration-300"
-                  replace
                 >
                   <Image
                     priority
