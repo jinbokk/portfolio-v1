@@ -1,4 +1,4 @@
-import useWindowDimensions from "@/hooks/useWindowDimensions";
+import useWindowDimensions from "@hooks/useWindowDimensions";
 import Image from "next/image";
 import Link from "next/link";
 import GithubSimpleLogo from "public/icons/github-logo-simple.svg";
@@ -66,7 +66,7 @@ export default function Project() {
         </h1>
 
         {projectData.map((item, index) => {
-          return windowWidth && windowWidth < 768 ? (
+          return windowWidth && windowWidth < 1024 ? (
             <div
               key={index}
               className="relative drop-shadow-lg rounded-md bg-teal-700/[.2] px-4 py-7 mb-10"
@@ -88,7 +88,7 @@ export default function Project() {
                 </div>
               </div>
 
-              <Link href={item.detail} className="text-highlight">
+              <Link href={item.detail} className="text-highlight" replace>
                 <h3
                   className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
                 >
@@ -120,10 +120,16 @@ export default function Project() {
                   </div>
 
                   <div
-                    className={`flex items-center ${
-                      index % 2 === 0 ? "justify-end" : "justify-start"
+                    className={`flex items-center justify-end ${
+                      index % 2 === 0 ? "" : "flex-row-reverse"
                     }`}
                   >
+                    <a
+                      href={item.detail}
+                      className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
+                    >
+                      readme.md
+                    </a>
                     <a
                       href={item.github}
                       target="_blank"
@@ -145,6 +151,7 @@ export default function Project() {
               <Link
                 href={item.detail}
                 className="absolute top-0 left-0 w-full h-full m-0 -z-10"
+                replace
               >
                 <Image
                   priority
@@ -209,21 +216,27 @@ export default function Project() {
                   })}
                 </div>
                 <div
-                  className={`flex items-center ${
-                    index % 2 === 0 ? "justify-end" : "justify-start"
+                  className={`flex items-center justify-end ${
+                    index % 2 === 0 ? "" : "flex-row-reverse"
                   }`}
                 >
                   <a
+                    href={item.detail}
+                    className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
+                  >
+                    readme.md
+                  </a>
+                  <a
                     href={item.github}
                     target="_blank"
-                    className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                    className="hover:text-highlight duration-200 mx-2"
                   >
                     <GithubSimpleLogo />
                   </a>
                   <a
                     href={item.url}
                     target="_blank"
-                    className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                    className="hover:text-highlight duration-200 mx-2"
                   >
                     <WebsiteClickLogo />
                   </a>

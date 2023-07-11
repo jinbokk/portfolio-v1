@@ -1,7 +1,7 @@
 import "./globals.css";
-import { inter, roboto_mono, inconsolata } from "./fonts";
-import Navbar from "@/components/Navbar";
-import Mouse from "@/util/Mouse";
+import { inter, roboto_mono, inconsolata } from "../util/fonts";
+import Navbar from "@components/Navbar";
+import Mouse from "@util/Mouse";
 import SplashScreen from "./components/SplashScreen";
 
 export const metadata = {
@@ -16,12 +16,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="scroll-smooth antialiased">
-      <body
-        className={`${inconsolata.variable} ${inter.variable} ${roboto_mono.variable}`}
-      >
+    <html
+      lang="en"
+      className={`scroll-smooth antialiased ${inconsolata.variable} ${inter.variable} ${roboto_mono.variable}`}
+    >
+      <body>
         <Mouse />
-        <Navbar />
         {children}
       </body>
     </html>

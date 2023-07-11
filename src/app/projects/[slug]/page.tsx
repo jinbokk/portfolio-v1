@@ -1,11 +1,19 @@
-import Readme from "@/components/Readme";
+import Navbar from "@components/Navbar";
+import Readme from "@components/Readme";
 
 export default function Page({ params }) {
   return (
-    <main>
-      <section>
-        <Readme project={params.slug} />
-      </section>
-    </main>
+    <section>
+      {/* <Navbar
+        projects={true}
+        navMenus={[
+          "eeso-cake-app",
+          "JB-NETFLIX",
+          "MUSICOR",
+          "THE_JINBOK_TIMES",
+        ]}
+      /> */}
+      <Readme project={params.slug} />
+    </section>
   );
 }

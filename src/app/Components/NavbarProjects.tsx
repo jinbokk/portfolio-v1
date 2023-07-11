@@ -10,56 +10,13 @@ import useWindowDimensions from "@hooks/useWindowDimensions";
 import { Divide as Hamburger } from "hamburger-react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
-export default function Navbar({ navMenus, projects = false }) {
+export default function NavbarProjects({ navMenus }) {
   //* Responsive
   const [isOpen, setOpen] = useState(false);
   const windowWidth = useWindowDimensions().width;
 
   //* menuHighlight
   const [currentMenu, setCurrentMenu] = useState(undefined);
-
-  useLayoutEffect(() => {
-    const tl = gsap.timeline();
-
-    gsap.config({
-      nullTargetWarn: false,
-    });
-
-    tl.fromTo(
-      ".logoContainer",
-      { opacity: 0, x: 20, y: -10 },
-      { opacity: 1, x: 20, y: 20, duration: 0.5 }
-    )
-      .fromTo(
-        ".navMenu-1",
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.5 },
-        "+=0.3"
-      )
-      .fromTo(
-        ".navMenu-2",
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.5 },
-        "-=0.3"
-      )
-      .fromTo(
-        ".navMenu-3",
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.5 },
-        "-=0.3"
-      )
-      .fromTo(
-        ".navMenu-4",
-        { opacity: 0, x: 100 },
-        { opacity: 1, x: 0, duration: 0.5 },
-        "-=0.3"
-      )
-      .fromTo(
-        ".buttonContainer",
-        { opacity: 0 },
-        { opacity: 0.8, duration: 1, ease: "expo.power4" }
-      );
-  }, []);
 
   return (
     <>
@@ -114,16 +71,16 @@ export default function Navbar({ navMenus, projects = false }) {
               <ul>
                 {navMenus.map((menu, index) => {
                   return (
-                    <a
+                    <Link
                       key={index}
-                      href={`/#${menu}`}
+                      href={`/projects/${menu}`}
                       onClick={() => setCurrentMenu(menu)}
-                      className={`navMenu-${index + 1} ${
+                      className={` navMenu-${index + 1} ${
                         currentMenu === menu ? "text-highlight" : ""
                       } `}
                     >
                       <li className="py-2 my-2">{menu.toUpperCase()}</li>
-                    </a>
+                    </Link>
                   );
                 })}
               </ul>
@@ -169,7 +126,7 @@ export default function Navbar({ navMenus, projects = false }) {
         <nav className="hidden md:block">
           <Link
             href="/"
-            className="logoContainer group fixed z-50 sm:w-16 sm:h-16 w-10 h-10 top-12 left-12"
+            className="logoContainer  group fixed z-50 sm:w-16 sm:h-16 w-10 h-10 top-12 left-12"
           >
             <svg
               version="1.1"
@@ -212,21 +169,21 @@ export default function Navbar({ navMenus, projects = false }) {
           <ul className="group fixed z-50 top-12 right-14 flex flex-col [&>a]:my-4 duration-300">
             {navMenus.map((menu, index) => {
               return (
-                <a
+                <Link
                   key={index}
-                  href={`/#${menu}`}
+                  href={`/projects/${menu}`}
                   onClick={() => setCurrentMenu(menu)}
-                  className={`navMenu-${index + 1} ${
+                  className={` navMenu-${index + 1} ${
                     currentMenu === menu ? "text-highlight" : ""
                   } hover:text-highlight`}
                 >
                   <li>{menu.toUpperCase()}</li>
-                </a>
+                </Link>
               );
             })}
           </ul>
 
-          <div className="buttonContainer fixed z-50 bottom-0 right-[80px] flex items-center [writing-mode:vertical-lr]">
+          <div className="buttonContainer  fixed z-50 bottom-0 right-[80px] flex items-center [writing-mode:vertical-lr]">
             <a
               href="https://github.com/jinbokk"
               target="_blank"

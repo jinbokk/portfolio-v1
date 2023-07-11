@@ -1,11 +1,11 @@
 import { useEffect, useState, useRef } from "react";
 import { CSSTransition } from "react-transition-group";
-import Architect from "@/animation/Architect";
-import DevGroup from "@/animation/DevGroup";
-import Salesman from "@/animation/Salesman";
-import InteriorDesigner from "@/animation/InteriorDesigner";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
-import Intern from "@/animation/Intern";
+import Architect from "@animation/Architect";
+import DevGroup from "@animation/DevGroup";
+import Salesman from "@animation/Salesman";
+import InteriorDesigner from "@animation/InteriorDesigner";
+import useWindowDimensions from "@hooks/useWindowDimensions";
+import Intern from "@animation/Intern";
 
 const journeyData = [
   {

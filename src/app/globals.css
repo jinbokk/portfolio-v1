@@ -13,12 +13,12 @@ html,
 body {
   width: 100vw;
   overflow-x: hidden;
+  font-family: var(--font-inconsolata)
 }
 
 body {
   color: white;
   background: var(--background-color);
-  font-family: var(--font-inconsolata);
 }
 
 body::-webkit-scrollbar {
@@ -45,7 +45,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 main {
-  padding: 0 15%;
+  /* padding: 0 15%; */
+  padding: 0 200px;
   margin: 0 auto;
   min-height: 100vh;
 }
