@@ -1,6 +1,7 @@
 import "./globals.css";
 import { inter, roboto_mono, inconsolata } from "../util/fonts";
 import Mouse from "@util/Mouse";
+import Footer from "@components/Footer";
 
 export const metadata = {
   title: "Lee Jinbok's Portfolio",

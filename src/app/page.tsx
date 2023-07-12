@@ -9,6 +9,7 @@ import Me from "@components/landing/Hello";
 import SplashScreen from "@components/SplashScreen";
 import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion, useInView } from "framer-motion";
+import Footer from "@components/Footer";
 
 // function Section({ children }) {
 //   const ref = useRef(null);
@@ -58,6 +59,7 @@ export default function Home() {
             {/* <Section> */}
             <GetInTouch />
             {/* </Section> */}
+            <Footer />
           </main>
         </>
       )}

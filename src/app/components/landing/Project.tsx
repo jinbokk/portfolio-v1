@@ -88,13 +88,13 @@ export default function Project() {
                 </div>
               </div>
 
-              <Link href={item.detail} className="text-highlight" replace>
+              <a href={item.url} className="text-highlight" target="_blank">
                 <h3
                   className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
                 >
                   {item.title}
                 </h3>
-              </Link>
+              </a>
 
               <div className="opacity-80">
                 <div
@@ -127,7 +127,6 @@ export default function Project() {
                     <Link
                       href={item.detail}
                       className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
-                      replace
                     >
                       readme.md
                     </Link>
@@ -149,10 +148,10 @@ export default function Project() {
                 </div>
               </div>
 
-              <Link
-                href={item.detail}
+              <a
+                href={item.url}
+                target="_blank"
                 className="absolute top-0 left-0 w-full h-full m-0 -z-10"
-                replace
               >
                 <Image
                   priority
@@ -162,7 +161,7 @@ export default function Project() {
                   height={700}
                   className="w-full h-full object-cover opacity-[5%]"
                 />
-              </Link>
+              </a>
             </div>
           ) : (
             <div
@@ -184,10 +183,10 @@ export default function Project() {
                   </div>
                   <div className="text-sm opacity-80">{item.duration}</div>
                 </div>
-                <Link
-                  href={item.detail}
+                <a
+                  href={item.url}
+                  target="_blank"
                   className="hover:text-highlight duration-300"
-                  replace
                 >
                   <div
                     className={`text-4xl my-2 font-bold font-inter ${
@@ -196,7 +195,7 @@ export default function Project() {
                   >
                     {item.title}
                   </div>
-                </Link>
+                </a>
                 <p
                   className={`relative bg-highlight-dark drop-shadow-lg font-inter leading-relaxed z-10 p-4 ${
                     index % 2 === 0 ? "text-end" : "text-start"
@@ -225,7 +224,6 @@ export default function Project() {
                   <Link
                     href={item.detail}
                     className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
-                    replace
                   >
                     readme.md
                   </Link>
@@ -251,12 +249,12 @@ export default function Project() {
                   index % 2 === 0 ? "items-end left-20" : " right-20"
                 }`}
               >
-                <Link
-                  href={item.detail}
+                <a
+                  href={item.url}
+                  target="_blank"
                   className="w-fit h-fit m-0 z-1
                   after:absolute after:top-0 after:w-full after:h-full after:bg-gray-500 after:mix-blend-multiply
                   hover:after:bg-transparent after:duration-300"
-                  replace
                 >
                   <Image
                     priority
@@ -266,7 +264,7 @@ export default function Project() {
                     height={700}
                     className="w-full h-full"
                   />
-                </Link>
+                </a>
               </div>
             </div>
           );
