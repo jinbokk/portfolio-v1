@@ -20,7 +20,7 @@ export default function AboutMe() {
             interests me, and I made up my mind to become a developer. I aspire
             to grow as a SOFTWARE ENGINEER, working closely with people to
             create meaningful experiences.<br></br>
-            <br></br>Recently, I launched a website for my sister&apos;s cake
+            <br></br>Recently, I launched a website for cake
             workshop using the MERN stack.<br></br>I am currently studying
             TypeScript and Next.js!
           </h2>
