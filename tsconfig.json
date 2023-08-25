@@ -28,10 +28,6 @@
       "@hooks/*": ["hooks/*"]
     }
   },
-<<<<<<< HEAD
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/components/landing/ThreeJS.js"],
-=======
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
->>>>>>> 2eb46fedf5e7eed58babf546e72ea89633065241
   "exclude": ["node_modules"]
 }
