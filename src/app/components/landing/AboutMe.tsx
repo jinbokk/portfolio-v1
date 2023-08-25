@@ -1,6 +1,9 @@
 import Image from "next/image";
 import profilePic from "/public/images/profile_image_1.png";
+<<<<<<< HEAD
 import ThreeJS from "./ThreeJS";
+=======
+>>>>>>> 2eb46fedf5e7eed58babf546e72ea89633065241
 
 export default function AboutMe() {
   return (
@@ -21,9 +24,15 @@ export default function AboutMe() {
             interests me, and I made up my mind to become a developer. I aspire
             to grow as a SOFTWARE ENGINEER, working closely with people to
             create meaningful experiences.<br></br>
+<<<<<<< HEAD
             <br></br>Recently, I launched a website for cake workshop using the
             MERN stack.<br></br>I am currently studying TypeScript, Next.js and
             <span className="font-bold mx-2">THREE.JS !</span>
+=======
+            <br></br>Recently, I launched a website for cake
+            workshop using the MERN stack.<br></br>I am currently studying
+            TypeScript and Next.js!
+>>>>>>> 2eb46fedf5e7eed58babf546e72ea89633065241
           </h2>
         </div>
 
@@ -53,8 +62,11 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
+<<<<<<< HEAD
 
       <div className="w-full h-[40vh] mt-10 border-4 border-gray rounded-3xl"><ThreeJS /></div>
+=======
+>>>>>>> 2eb46fedf5e7eed58babf546e72ea89633065241
     </section>
   );
 }
