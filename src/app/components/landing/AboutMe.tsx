@@ -2,6 +2,7 @@ import Image from "next/image";
 import profilePic from "/public/images/profile_image_1.png";
 import ThreeJS from "./ThreeJS";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from "swiper/modules"
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
@@ -100,21 +101,26 @@ export default function AboutMe() {
 
       {/* <div className="w-full h-[40vh] mt-10 border-4 border-gray rounded-3xl"><ThreeJS /></div> */}
 
-      <div className="w-full lg:px-20 mt-5">
-        <div className="text-center">Click to view      <a
-          className="opacity-50 hover:opacity-100 duration-300"
-          href="https://github.com/jinbokk/3D-study"
-          target="_blank"
-        >/ Visit Repository</a></div>
+      <div className="w-full lg:px-20 mt-8">
+        <div className="text-center">Click to view
+          <a
+            className="opacity-50 hover:opacity-100 duration-300"
+            href="https://github.com/jinbokk/3D-study"
+            target="_blank"
+          >/ Visit Repository</a>
+        </div>
         <Swiper
+          modules={[Pagination]}
           spaceBetween={0}
           slidesPerView={1}
-          pagination={
-            {
-              el: '.swiper-pagination',
-              type: 'bullets',
-            }
-          }
+          pagination={{ clickable: true }}
+          style={{
+            "--swiper-pagination-color": "rgb(16, 240, 221)",
+            "--swiper-pagination-bullet-inactive-color": "#999999",
+            "--swiper-pagination-bullet-inactive-opacity": "0.2",
+            "--swiper-pagination-bullet-size": "10px",
+            "--swiper-pagination-bullet-horizontal-gap": "10px"
+          }}
           breakpoints={
             {
               1391: {
@@ -125,7 +131,7 @@ export default function AboutMe() {
         >
           {images.map((image, index) => {
             return (
-              <SwiperSlide key={index} className="p-5">
+              <SwiperSlide key={index} className="p-5 lg:mb-12 mb-8">
                 <Image width={1000} height={500} priority src={`/images/threejs/${image.dimension}-${image.title}.png`} alt=""
                   className="peer cursor-pointer opacity-50 hover:opacity-100 hover:scale-105 transition ease-out duration-500" onClick={() => {
                     window.open(
