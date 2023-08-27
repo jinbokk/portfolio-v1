@@ -131,6 +131,7 @@ export default function Navbar({ navMenus }: { navMenus: string[] }) {
                 <a
                   href="https://github.com/jinbokk"
                   target="_blank"
+                  rel="noopener noreferrer"
                 >
                   <svg
                     width="35"
@@ -146,6 +147,7 @@ export default function Navbar({ navMenus }: { navMenus: string[] }) {
                 <a
                   href="https://velog.io/@jinbokk"
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="group">
                   <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                     width="36" height="36" viewBox="0 0 225.000000 225.000000"
@@ -251,6 +253,7 @@ export default function Navbar({ navMenus }: { navMenus: string[] }) {
             <a
               href="https://github.com/jinbokk"
               target="_blank"
+              rel="noopener noreferrer"
               className="group"
             >
               <svg
@@ -266,6 +269,7 @@ export default function Navbar({ navMenus }: { navMenus: string[] }) {
             <a
               href="https://velog.io/@jinbokk"
               target="_blank"
+              rel="noopener noreferrer"
               className="group mt-3">
               <svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                 width="36" height="36" viewBox="0 0 225.000000 225.000000"

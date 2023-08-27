@@ -107,6 +107,7 @@ export default function AboutMe() {
             className="opacity-50 hover:opacity-100 duration-300"
             href="https://github.com/jinbokk/3D-study"
             target="_blank"
+            rel="noopener noreferrer"
           >/ Visit Repository</a>
         </div>
         <Swiper

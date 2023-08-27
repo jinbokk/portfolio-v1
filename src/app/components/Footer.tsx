@@ -6,6 +6,7 @@ export default function Footer() {
         className="opacity-50 hover:opacity-100 duration-300"
         href="https://code.visualstudio.com/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Studio Code
       </a>{" "}
@@ -14,6 +15,7 @@ export default function Footer() {
         className="opacity-50 hover:opacity-100 duration-300"
         href="https://nextjs.org/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Next.js
       </a>{" "}
@@ -22,6 +24,7 @@ export default function Footer() {
         className="opacity-50 hover:opacity-100 duration-300"
         href="https://tailwindcss.com/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Tailwind CSS
       </a>
@@ -30,6 +33,7 @@ export default function Footer() {
         className="opacity-50 hover:opacity-100 duration-300"
         href="https://vercel.com/"
         target="_blank"
+        rel="noopener noreferrer"
       >
         Vercel
       </a>
@@ -40,6 +44,7 @@ export default function Footer() {
           className="text-highlight opacity-50 hover:opacity-100 duration-300"
           href="https://github.com/jinbokk/portfolio-v1"
           target="_blank"
+          rel="noopener noreferrer"
         >
           Jinbok Lee
         </a>

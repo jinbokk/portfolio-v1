@@ -18,6 +18,7 @@ const journeyData = [
           <a
             href="https://company.hanssem.com/main.do"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-highlight"
           >
             {" "}
@@ -43,6 +44,7 @@ const journeyData = [
             <a
               href="https://company.hanssem.com/main.do"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>HANSSEM / Territorial Representative</span>
@@ -62,6 +64,7 @@ const journeyData = [
           <a
             href="https://k2group.co.kr/main"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-highlight"
           >
             {" "}
@@ -86,6 +89,7 @@ const journeyData = [
             <a
               href="https://k2group.co.kr/main"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>K2 / Store Manager</span>
@@ -105,6 +109,7 @@ const journeyData = [
           <a
             href="https://www.i-sh.co.kr/main/index.do"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-highlight"
           >
             @Seoul Housing
@@ -125,6 +130,7 @@ const journeyData = [
             <a
               href="https://www.i-sh.co.kr/main/index.do"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>SH Corporation / Intern</span>
@@ -134,6 +140,7 @@ const journeyData = [
             <a
               href="https://taehaeng.modoo.at/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>Taeha Engineering & Architecture / Intern</span>
@@ -153,6 +160,7 @@ const journeyData = [
           <a
             href="https://taehaeng.modoo.at/"
             target="_blank"
+            rel="noopener noreferrer"
             className="text-highlight"
           >
             @TAEHA
@@ -179,6 +187,7 @@ const journeyData = [
             <a
               href="https://www.i-sh.co.kr/main/index.do"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>SH Corporation / Intern</span>
@@ -188,6 +197,7 @@ const journeyData = [
             <a
               href="https://taehaeng.modoo.at/"
               target="_blank"
+              rel="noopener noreferrer"
               className="hover:text-highlight duration-300"
             >
               <span>Taeha Engineering & Architecture / Intern</span>

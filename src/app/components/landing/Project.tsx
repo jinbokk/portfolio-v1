@@ -12,6 +12,7 @@ const projectData = [
     time: "2mo",
     stack: ["React", "Redux", "MongoDB", "Node.js", "AWS EC2"],
     github: "https://github.com/jinbokk/eeso-cake-app",
+    pdf: "https://drive.google.com/file/d/1z3Ozc21gzBXsf7HrYHf5epP5o_5KeGSr/view?usp=sharing",
     detail: "/projects/eeso-cake-app",
     url: "https://eeso-cake.com",
     description:
@@ -24,6 +25,7 @@ const projectData = [
     time: "2mo",
     stack: ["React", "Redux"],
     github: "https://github.com/jinbokk/JB-NETFLIX",
+    pdf: "https://drive.google.com/file/d/1p4NuC4NppKHcmHsnWvFtqA4YkXgvfb8I/view?usp=sharing",
     url: "https://netflix-jinbokk.netlify.app",
     detail: "/projects/JB-NETFLIX",
     description:
@@ -36,6 +38,7 @@ const projectData = [
     time: "2mo",
     stack: ["HTML", "CSS", "JAVASCRIPT"],
     github: "https://github.com/jinbokk/MUSICOR",
+    pdf: "https://drive.google.com/file/d/1vEwkAV0qcRaRieVmEcYM2iYQqSK88TZX/view?usp=sharing",
     url: "https://musicor.netlify.app",
     detail: "/projects/MUSICOR",
     description:
@@ -48,6 +51,7 @@ const projectData = [
     time: "2mo",
     stack: ["HTML", "CSS", "JAVASCRIPT"],
     github: "https://github.com/jinbokk/THE_JINBOK_TIMES",
+    pdf: "https://drive.google.com/file/d/1hOiGbXH-zquLi5NxiaWevOQ7Nteuph0N/view?usp=sharing",
     url: "https://jinbok-news.netlify.app",
     detail: "/projects/THE_JINBOK_TIMES",
     description:
@@ -73,22 +77,20 @@ export default function Project() {
             >
               <div>
                 <div
-                  className={`mb-1 text-highlight text-sm ${
-                    index % 2 === 0 ? "text-end" : "text-start"
-                  }`}
+                  className={`mb-1 text-highlight text-sm ${index % 2 === 0 ? "text-end" : "text-start"
+                    }`}
                 >
                   Personal Project
                 </div>
                 <div
-                  className={`text-xs opacity-80 ${
-                    index % 2 === 0 ? "text-end" : "text-start"
-                  }`}
+                  className={`text-xs opacity-80 ${index % 2 === 0 ? "text-end" : "text-start"
+                    }`}
                 >
                   {item.duration}
                 </div>
               </div>
 
-              <a href={item.url} className="text-highlight" target="_blank">
+              <a href={item.url} className="text-highlight" target="_blank" rel="noopener noreferrer">
                 <h3
                   className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
                 >
@@ -98,17 +100,15 @@ export default function Project() {
 
               <div className="opacity-80">
                 <div
-                  className={`relative z-10 ${
-                    index % 2 === 0 ? "text-end" : "text-start"
-                  }`}
+                  className={`relative z-10 ${index % 2 === 0 ? "text-end" : "text-start"
+                    }`}
                 >
                   <p className="font-inter text-sm leading-relaxed mb-10">
                     {item.description}
                   </p>
                   <div
-                    className={`my-4 flex ${
-                      index % 2 === 0 ? "justify-end" : "justify-start"
-                    }`}
+                    className={`my-4 flex ${index % 2 === 0 ? "justify-end" : "justify-start"
+                      }`}
                   >
                     {item.stack.map((stack, stackIndex) => {
                       return (
@@ -120,9 +120,8 @@ export default function Project() {
                   </div>
 
                   <div
-                    className={`flex items-center justify-end ${
-                      index % 2 === 0 ? "" : "flex-row-reverse"
-                    }`}
+                    className={`flex items-center justify-end ${index % 2 === 0 ? "" : "flex-row-reverse"
+                      }`}
                   >
                     <Link
                       href={item.detail}
@@ -133,6 +132,15 @@ export default function Project() {
                     <a
                       href={item.github}
                       target="_blank"
+                      rel="noopener noreferrer"
+                      className="cursor-pointer hover:text-highlight duration-200 mx-2"
+                    >
+                      <GithubSimpleLogo />
+                    </a>
+                    <a
+                      href={item.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       className="cursor-pointer hover:text-highlight duration-200 mx-2"
                     >
                       <GithubSimpleLogo />
@@ -140,6 +148,7 @@ export default function Project() {
                     <a
                       href={item.url}
                       target="_blank"
+                      rel="noopener noreferrer"
                       className="cursor-pointer hover:text-highlight duration-200 mx-2"
                     >
                       <WebsiteClickLogo />
@@ -151,6 +160,7 @@ export default function Project() {
               <a
                 href={item.url}
                 target="_blank"
+                rel="noopener noreferrer"
                 className="absolute top-0 left-0 w-full h-full m-0 -z-10"
               >
                 <Image
@@ -166,14 +176,12 @@ export default function Project() {
           ) : (
             <div
               key={index}
-              className={`flex justify-center items-center py-20 ${
-                index % 2 === 0 ? "flex-row-reverse" : ""
-              }`}
+              className={`flex justify-center items-center py-20 ${index % 2 === 0 ? "flex-row-reverse" : ""
+                }`}
             >
               <div
-                className={`text-end w-3/5 relative ${
-                  index % 2 === 0 ? "items-end right-20" : "left-20"
-                }`}
+                className={`text-end w-3/5 relative ${index % 2 === 0 ? "items-end right-20" : "left-20"
+                  }`}
               >
                 <div
                   className={`${index % 2 === 0 ? "text-end" : "text-start"}`}
@@ -186,27 +194,25 @@ export default function Project() {
                 <a
                   href={item.url}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="hover:text-highlight duration-300"
                 >
                   <div
-                    className={`text-4xl my-2 font-bold font-inter ${
-                      index % 2 === 0 ? "text-end" : "text-start"
-                    }`}
+                    className={`text-4xl my-2 font-bold font-inter ${index % 2 === 0 ? "text-end" : "text-start"
+                      }`}
                   >
                     {item.title}
                   </div>
                 </a>
                 <p
-                  className={`relative bg-highlight-dark drop-shadow-lg font-inter leading-relaxed z-10 p-4 ${
-                    index % 2 === 0 ? "text-end" : "text-start"
-                  }`}
+                  className={`relative bg-highlight-dark drop-shadow-lg font-inter leading-relaxed z-10 p-4 ${index % 2 === 0 ? "text-end" : "text-start"
+                    }`}
                 >
                   {item.description}
                 </p>
                 <div
-                  className={`my-4 flex ${
-                    index % 2 === 0 ? "justify-end" : "justify-start"
-                  }`}
+                  className={`my-4 flex ${index % 2 === 0 ? "justify-end" : "justify-start"
+                    }`}
                 >
                   {item.stack.map((stack, stackIndex) => {
                     return (
@@ -217,10 +223,17 @@ export default function Project() {
                   })}
                 </div>
                 <div
-                  className={`flex items-center justify-end ${
-                    index % 2 === 0 ? "" : "flex-row-reverse"
-                  }`}
+                  className={`flex items-center justify-end ${index % 2 === 0 ? "" : "flex-row-reverse"
+                    }`}
                 >
+                  <a
+                    href={item.pdf}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
+                  >
+                    Korean PDF
+                  </a>
                   <Link
                     href={item.detail}
                     className="text-highlight duration-200 mx-2 border py-1 px-2 border-highlight hover:text-black hover:bg-highlight"
@@ -230,6 +243,7 @@ export default function Project() {
                   <a
                     href={item.github}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-highlight duration-200 mx-2"
                   >
                     <GithubSimpleLogo />
@@ -237,6 +251,7 @@ export default function Project() {
                   <a
                     href={item.url}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-highlight duration-200 mx-2"
                   >
                     <WebsiteClickLogo />
@@ -245,13 +260,13 @@ export default function Project() {
               </div>
 
               <div
-                className={`relative w-1/2 ${
-                  index % 2 === 0 ? "items-end left-20" : " right-20"
-                }`}
+                className={`relative w-1/2 ${index % 2 === 0 ? "items-end left-20" : " right-20"
+                  }`}
               >
                 <a
                   href={item.url}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="w-fit h-fit m-0 z-1
                   after:absolute after:top-0 after:w-full after:h-full after:bg-gray-500 after:mix-blend-multiply
                   hover:after:bg-transparent after:duration-300"

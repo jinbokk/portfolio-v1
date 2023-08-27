@@ -88,6 +88,7 @@ export default function NavbarProjects({ navMenus }: { navMenus: string[] }) {
               <a
                 href="https://github.com/jinbokk"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="p-4 mt-10 mb-2"
               >
                 <svg
@@ -187,6 +188,7 @@ export default function NavbarProjects({ navMenus }: { navMenus: string[] }) {
             <a
               href="https://github.com/jinbokk"
               target="_blank"
+              rel="noopener noreferrer"
               className="group"
             >
               <svg
