@@ -3,7 +3,7 @@ import Readme from "@components/Readme";
 
 export default function Page({ params }: { params: { slug: string } }) {
   return (
-    <section>
+    <section className="px-20">
       {/* <Navbar
         projects={true}
         navMenus={[
