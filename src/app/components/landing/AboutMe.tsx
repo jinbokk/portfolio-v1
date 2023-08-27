@@ -115,6 +115,7 @@ export default function AboutMe() {
           slidesPerView={1}
           pagination={{ clickable: true }}
           style={{
+            // @ts-ignore
             "--swiper-pagination-color": "rgb(16, 240, 221)",
             "--swiper-pagination-bullet-inactive-color": "#999999",
             "--swiper-pagination-bullet-inactive-opacity": "0.2",
